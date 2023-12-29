@@ -41,10 +41,10 @@ export const YoutubeButton = ({ style }: { style?: React.CSSProperties }) => {
   return (
     <Button
       backgroundColor="#ef0014"
-      onClick={() => window.open('https://youtu.be/Hvvhsmk_MlU')}
+      onClick={() => window.open('https://youtu.be')}
       style={style}
     >
-      유튜브 라이브 시청하기
+      Wedding Video
     </Button>
   );
 };
@@ -55,14 +55,14 @@ export const RSVPButton = ({ style }: { style?: React.CSSProperties }) => {
       <Button
         backgroundColor="#8554ff"
         onClick={() => {
-          window.open('https://forms.gle/wDUHn6snzFeaNha49');
+          window.open('https://forms.gle/EwxwJWqd96f3h3M5A');
         }}
         style={style}
       >
-        참가 여부 알려주기
+        R.S.V.P
       </Button>
       <div style={{ fontSize: '0.9rem', marginTop: 10, paddingBottom: 0 }}>
-        * 수정이 필요하다면 한번 더 작성해주시면 됩니다
+        * If corrections are needed, please write again.
       </div>
     </>
   );

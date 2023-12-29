@@ -3,7 +3,6 @@ import Footer from 'src/components/Footer';
 import AccountSection from './AccountSection';
 import GallarySection from './GallarySection';
 import IntroSection from './IntroSection';
-import OnlineSection from './OnlineSection';
 import RouteSection from './RouteSection';
 import SplashSection from './SplashSection';
 import TimelineSection from './TimelineSection';
@@ -21,19 +20,13 @@ const IndexPage = () => {
 
   return (
     <>
-      {/* <NavBar /> */}
 
       <SplashSection />
       <IntroSection />
       <NoticeSection />
       <TimelineSection />
-
       <RouteSection />
-      {/* <GwangjooRouteSection /> */}
-      <OnlineSection />
-      {/* <RSVPSection /> */}
       <AccountSection />
-      {/* <ShareSection /> */}
       <GallarySection />
 
       <Footer />

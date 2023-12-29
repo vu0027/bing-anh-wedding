@@ -7,42 +7,46 @@ import studio6 from 'public/photos/6.png';
 import studio7 from 'public/photos/7.png';
 import studio8 from 'public/photos/8.png';
 
-import jeju1 from 'public/photos/jeju1.jpeg';
-import jeju2 from 'public/photos/jeju2.jpeg';
-import jeju3 from 'public/photos/jeju3.jpeg';
-import jeju4 from 'public/photos/jeju4.jpeg';
-import jeju5 from 'public/photos/jeju5.jpeg';
-import jeju6 from 'public/photos/jeju6.jpeg';
-import jeju7 from 'public/photos/jeju7.jpeg';
-import jeju8 from 'public/photos/jeju8.jpeg';
-import jeju9 from 'public/photos/jeju9.jpeg';
-import jeju10 from 'public/photos/jeju10.jpeg';
-import jeju11 from 'public/photos/jeju11.jpeg';
-import jeju12 from 'public/photos/jeju12.jpeg';
-import jeju14 from 'public/photos/jeju14.jpeg';
+import _1 from 'public/photos/PreWed/1.jpg';
+import _2 from 'public/photos/PreWed/2.jpg';
+import _3 from 'public/photos/PreWed/3.jpg';
+import _4 from 'public/photos/PreWed/4.jpg';
+import _5 from 'public/photos/PreWed/5.jpg';
+import _6 from 'public/photos/PreWed/6.jpg';
+import _7 from 'public/photos/PreWed/7.jpg';
+import _8 from 'public/photos/PreWed/8.jpg';
+import _9 from 'public/photos/PreWed/9.jpg';
+import _10 from 'public/photos/PreWed/10.jpg';
+import _11 from 'public/photos/PreWed/11.jpg';
+import _12 from 'public/photos/PreWed/12.jpg';
+import _13 from 'public/photos/PreWed/13.jpg';
+import _14 from 'public/photos/PreWed/14.jpg';
+import _15 from 'public/photos/PreWed/15.jpg';
+import _16 from 'public/photos/PreWed/16.jpg';
+import _17 from 'public/photos/PreWed/17.jpg';
+import _18 from 'public/photos/PreWed/18.jpg';
+import _19 from 'public/photos/PreWed/19.jpg';
+import _20 from 'public/photos/PreWed/20.jpg';
 
 export const STUDIO_PICS = [
-  studio1,
-  studio2,
-  studio3,
-  studio4,
-  studio5,
-  studio6,
-  studio7,
-  studio8,
+  _1,
+  _2,
+  _3,
+  _4,
+  _5,
+  _6,
+  _7,
+  _8,
+  _9,
+  _10,
+  _11,
+  _12,
+  _13,
+  _14,
+  _15,
+  _16,
 ];
 export const JEJU_PICS = [
-  jeju1,
-  jeju2,
-  jeju3,
-  jeju4,
-  jeju5,
-  jeju6,
-  jeju7,
-  jeju8,
-  jeju9,
-  jeju10,
-  jeju11,
-  jeju12,
-  jeju14,
+  _19,
+  _20
 ];

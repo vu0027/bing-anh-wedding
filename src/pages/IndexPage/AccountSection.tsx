@@ -6,52 +6,45 @@ import copyTextToClipboard from 'src/utils/copyToClipboard';
 
 const AccountSection = () => {
   return (
-    <Section backgroundColor={COLORS.highlight2} title="멀리서 마음 전하기">
+    <Section backgroundColor={COLORS.highlight2} title="Honeymoon fund">
       <Collapsible
-        title="신부측 계좌번호 보기"
+        title="View Groom Account"
         contents={
           <div>
             <CopyInfo />
             <Acocunt
-              bankName="하나은행"
-              accountNo="742-910051-74007"
-              name="진유림"
+              bankName="Zelle"
+              accountNo="405 510 2655"
+              name="Bing-Hao Chiang"
             />
             <Acocunt
-              bankName="국민은행"
-              accountNo="473-201010-03539"
-              name="김은숙"
+              bankName="Venmo"
+              accountNo="Bing-Hao-Chiang"
+              name="Bing-Hao Chiang"
             />
           </div>
         }
       />
       <Collapsible
-        title="신랑측 계좌번호 보기"
+        title="View Bride Account"
         contents={
           <div>
             <CopyInfo />
             <Acocunt
-              bankName="우리은행"
-              accountNo="1002-040-231235"
-              name="장기효"
+              bankName="Zelle"
+              accountNo="405 604 7365"
+              name="Anh Vu"
             />
             <Acocunt
-              bankName="기업은행"
-              accountNo="011-601-8247"
-              name="장채환"
-            />
-            <Acocunt
-              bankName="기업은행"
-              accountNo="010-4081-8246"
-              name="서순옥"
+              bankName="Venmo"
+              accountNo="anhvucs"
+              name="Anh Vu"
             />
           </div>
         }
       />
       <div>
-        축의금을 보내셨다면 알려주세요.
-        <br />
-        감사 인사를 드리고 싶습니다.
+        We appreciate you making this happen.
       </div>
     </Section>
   );
@@ -59,7 +52,7 @@ const AccountSection = () => {
 
 const CopyInfo = () => (
   <div style={{ fontSize: '0.9em', fontStyle: 'italic', marginBottom: 3 }}>
-    클릭하면 계좌번호가 복사됩니다.
+    Click to copy the account number.
   </div>
 );
 
@@ -76,7 +69,7 @@ const Acocunt = ({
     <div
       onClick={() => {
         copyTextToClipboard(accountNo, () => {
-          alert(`${name}님의 ${bankName} 계좌번호를 복사했습니다.`);
+          alert(`${name}'s ${bankName} is copied.`);
         });
       }}
       style={{

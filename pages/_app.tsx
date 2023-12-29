@@ -6,30 +6,21 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
-        <title>유림, 기효 결혼해요</title>
+        <title>Bing & Anh's Wedding</title>
         <meta
           name="description"
-          content="9월 17일 토요일 12시, 네이버 1784사옥 28층 스카이홀"
+          content="Sunday, May 5th, 2024"
         />
         {/* open graph */}
-        <meta property="og:title" content="유림, 기효 결혼해요" />
+        <meta property="og:title" content="Bing & Anh's Wedding" />
         <meta
           property="og:description"
-          content="9월 17일 토요일 12시, 네이버 1784사옥 28층 스카이홀"
-        />
-        <meta property="og:image" content="./meta.png" />
-        <meta
-          property="og:url"
-          content="https://yurim-josh-wedding-card.vercel.app/"
-        />
-        {/* twitter open graph */}
-        <meta name="twitter:title" content="유림, 기효 결혼해요" />
-        <meta name="twitter:image" content="./meta.png" />
-        <meta
-          name="twitter:url"
-          content="https://yurim-josh-wedding-card.vercel.app/"
+          content="Sunday, May 5th, 2024"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet" />
         <script
           className="daum_roughmap_loader_script"
           src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"

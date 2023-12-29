@@ -2,23 +2,21 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { GREYS } from 'src/assets/theme';
 
+
 const TimelineSection = () => {
   return (
     <Footer>
-      <h3>CREDITS</h3>
+      <h3>Made by Bing-Hao and Anh</h3>
       <table>
         <tbody>
           <tr>
-            <td>디자인</td>
-            <td>정윤지</td>
+            <td>We are filled with excitement for our upcoming wedding</td>
           </tr>
           <tr>
-            <td>개발</td>
-            <td>진유림, 장기효</td>
+            <td>and we'd love it if you could join us.</td>
           </tr>
           <tr>
-            <td>일러스트</td>
-            <td>진유림</td>
+            <td>It would mean a lot to have you there with us on this special day!</td>
           </tr>
         </tbody>
       </table>

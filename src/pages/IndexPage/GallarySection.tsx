@@ -11,49 +11,52 @@ const Heading = styled.h3`
   margin-bottom: 14px;
 `;
 
+const AnimatedWrapper = styled.div<{ delay?: string }>`
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  border-radius: 10px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1);
+  }
+
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: ${(props) => props.delay || '0s'};
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+`;
+
+const StyledVerticalCarousel = styled(VerticalCarousel)`
+  border: 2px solid ${COLORS.highlight2};
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+`;
+
 const GallarySection = () => {
   return (
-    <Section backgroundColor={COLORS.highlight3} title={`사진 구경하기`}>
-      <Heading>
-        <a
-          href="https://www.instagram.com/studiopeople.kr.self/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          셀프스튜디오
-        </a>
-        에서 20분 컷으로 찍은 사진이에요.
-      </Heading>
-      <VerticalCarousel
-        images={STUDIO_PICS}
-        alt="셀프스튜디오 사진"
-        showSmallerImageOnMobile={true}
-      />
+    <Section backgroundColor={COLORS.highlight3} title={`Gallery`}>
+      <AnimatedWrapper>
+        <StyledVerticalCarousel
+          images={STUDIO_PICS}
+          alt="prewedding"
+          showSmallerImageOnMobile={true}
+        />
+      </AnimatedWrapper>
       <Heading style={{ marginTop: 48 }}>
-        오랜 동료{' '}
-        <a
-          href="https://www.instagram.com/20_moments/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          영진님
-        </a>
-        이 제주도에서 찍어준 사진이에요.
+        Swipe to the right for more pictures.
       </Heading>
-      <VerticalCarousel alt="제주도 웨딩 사진" images={JEJU_PICS} />
-      <Heading style={{ marginTop: 48 }}>
-        곧 제주에서 웨딩영상 브랜드를 런칭할{' '}
-        <a
-          href="https://www.instagram.com/imd.film/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          대혁님
-        </a>
-        이 찍어준 영상이에요.
-      </Heading>
-
-      <YouTubeEmbed />
+      <AnimatedWrapper delay="0.2s">
+        <StyledVerticalCarousel alt="dating" images={JEJU_PICS} />
+      </AnimatedWrapper>
+      <Heading style={{ marginTop: 48 }}>Dating Photos</Heading>
     </Section>
   );
 };
@@ -69,4 +72,5 @@ const YouTubeEmbed = () => (
     allowFullScreen
   ></iframe>
 );
+
 export default GallarySection;

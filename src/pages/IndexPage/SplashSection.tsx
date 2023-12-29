@@ -1,22 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
+import Countdown from 'react-countdown';
 
 const SplashSection = () => {
+  const [isClient, setIsClient] = useState(false);
+  const weddingDate = new Date('May 5, 2024');
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
-    <div style={{ height: '100vh', color: 'white' }}>
+    <SplashContainer>
       <JejuVideo />
       <FlexContainer>
-        <MainHeading>유림, 기효 결혼해요!</MainHeading>
-        <div>
-          2022년 9월 17일 토요일 낮 12시
-          <br />
-          네이버 1784 신사옥
-        </div>
-        <HorizontalLine style={{ marginTop: '5vh' }} />
+        <MainHeading>Bing and Anh are getting married.</MainHeading>
+        <CountdownContainer>
+          {isClient && (
+            <Countdown date={weddingDate} renderer={CountdownRenderer} />
+          )}
+        </CountdownContainer>
+
       </FlexContainer>
-    </div>
+    </SplashContainer>
   );
 };
+
+const SplashContainer = styled.div`
+  height: 100vh;
+  color: white;
+  font-family: 'Mea Culpa', sans-serif;
+  font-size: 50px;
+  `;
 
 const FlexContainer = styled.div`
   display: flex;
@@ -28,12 +43,41 @@ const FlexContainer = styled.div`
 `;
 
 const MainHeading = styled.h1`
-  margin: 10vh 0 24px;
+  margin: 61vh 0 24px;
 `;
 
-const HorizontalLine = styled.div`
-  height: 40vh;
-  border-left: 1px solid white;
+const CountdownContainer = styled.div`
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #ffeb3b; /* Custom text color for the countdown */
+`;
+
+const CountdownRenderer = ({ days, hours, minutes, seconds, completed }: any) => {
+  if (completed) {
+    return <CountdownComplete>It's Wedding Day!</CountdownComplete>;
+  } else {
+    return (
+      <CountdownText>
+        {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
+      </CountdownText>
+    );
+  }
+};
+
+const CountdownText = styled.span`
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff; /* Custom text color for the countdown */
+`;
+
+const CountdownComplete = styled.span`
+  font-weight: bold;
+  color: #4caf50; /* Custom text color for the completed countdown */
+`;
+
+const EventDetails = styled.div`
+  font-size: 18px;
+  color: #bdbdbd; /* Custom text color for event details */
 `;
 
 const JejuVideo = () => {
@@ -50,9 +94,10 @@ const JejuVideo = () => {
         objectFit: 'cover',
         position: 'absolute',
         zIndex: -1,
+        opacity: 0.7,
       }}
     >
-      <source src={'/jejuVideo.mp4'} />
+      <source src={'/binganh.mp4'} />
     </video>
   );
 };
