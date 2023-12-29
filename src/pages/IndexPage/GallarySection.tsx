@@ -22,7 +22,7 @@ const AnimatedWrapper = styled.div<{ delay?: string }>`
   }
 
   animation: fadeInUp 0.8s forwards;
-  animation-delay: ${(props) => props.delay || '0s'};
+  animation-delay: ${props => props.delay || '0s'};
 
   @keyframes fadeInUp {
     to {

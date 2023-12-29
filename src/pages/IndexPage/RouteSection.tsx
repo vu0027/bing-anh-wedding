@@ -12,88 +12,80 @@ const RouteSection = () => {
   const googleMapsLinkWinery = `https://www.google.com/maps/place/${destinationAddressWinery}`;
 
   return (
-      <Section backgroundColor={COLORS.highlight1} title="Directions">
-        <div style={{ marginBottom: 22 }}>
-          <span style={{ fontSize: '1.2rem' }}>
-            Saint Andrew Dung-Lac Catholic Church
-          </span>
-          <br />
-          <span style={{ fontSize: '0.9rem' }}>
-            3115 SW 59th St, Oklahoma City, OK 73159
-          </span>
+    <Section backgroundColor={COLORS.highlight1} title="Directions">
+      <div style={{ marginBottom: 22 }}>
+        <span style={{ fontSize: '1.2rem' }}>
+          Saint Andrew Dung-Lac Catholic Church
+        </span>
+        <br />
+        <span style={{ fontSize: '0.9rem' }}>
+          3115 SW 59th St, Oklahoma City, OK 73159
+        </span>
+      </div>
+      <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+        <div className="image-container">
+          <Image src={churchmap} alt="Static Map" className="map-image" />
         </div>
-        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" >
-          <div className="image-container">
-            <Image
-              src={churchmap}
-              alt="Static Map"
-              className="map-image"
-            />
-          </div>
-        </a>
+      </a>
 
-        <style jsx>{`
-          .image-container {
-            position: relative;
-            width: 100%;
-            height: 170px;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-          }
+      <style jsx>{`
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 170px;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-          .image-container:hover {
-            transform: scale(0.98);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
-          }
+        .image-container:hover {
+          transform: scale(0.98);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+        }
 
-          .map-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-          }
-        `}</style>
-        <div style={{ marginBottom: 20, marginTop: 40 }}>
-          <span style={{ fontSize: '1.2rem' }}>
-            Clauren Ridge Vineyard and Winery
-          </span>
-          <br />
-          <span style={{ fontSize: '0.9rem' }}>
-            6000 W Waterloo Rd, Edmond, OK 73025
-          </span>
+        .map-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+        }
+      `}</style>
+      <div style={{ marginBottom: 20, marginTop: 40 }}>
+        <span style={{ fontSize: '1.2rem' }}>
+          Clauren Ridge Vineyard and Winery
+        </span>
+        <br />
+        <span style={{ fontSize: '0.9rem' }}>
+          6000 W Waterloo Rd, Edmond, OK 73025
+        </span>
+      </div>
+      <a href={googleMapsLinkWinery} target="_blank" rel="noopener noreferrer">
+        <div className="image-container">
+          <Image src={winerymap} alt="Static Map" className="map-image" />
         </div>
-        <a href={googleMapsLinkWinery} target="_blank" rel="noopener noreferrer" >
-          <div className="image-container">
-            <Image
-              src={winerymap}
-              alt="Static Map"
-              className="map-image"
-            />
-          </div>
-        </a>
+      </a>
 
-        <style jsx>{`
-          .image-container {
-            position: relative;
-            width: 100%;
-            height: 170px;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-          }
+      <style jsx>{`
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 170px;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-          .image-container:hover {
-            transform: scale(0.98);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
-          }
+        .image-container:hover {
+          transform: scale(0.98);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow as needed */
+        }
 
-          .map-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-          }
-        `}</style>
-      </Section>
+        .map-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+        }
+      `}</style>
+    </Section>
   );
 };
 

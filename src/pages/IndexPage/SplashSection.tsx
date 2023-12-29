@@ -20,7 +20,6 @@ const SplashSection = () => {
             <Countdown date={weddingDate} renderer={CountdownRenderer} />
           )}
         </CountdownContainer>
-
       </FlexContainer>
     </SplashContainer>
   );
@@ -31,7 +30,7 @@ const SplashContainer = styled.div`
   color: white;
   font-family: 'Mea Culpa', sans-serif;
   font-size: 50px;
-  `;
+`;
 
 const FlexContainer = styled.div`
   display: flex;
@@ -52,9 +51,15 @@ const CountdownContainer = styled.div`
   color: #ffeb3b; /* Custom text color for the countdown */
 `;
 
-const CountdownRenderer = ({ days, hours, minutes, seconds, completed }: any) => {
+const CountdownRenderer = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  completed,
+}: any) => {
   if (completed) {
-    return <CountdownComplete>It's Wedding Day!</CountdownComplete>;
+    return <CountdownComplete>It&apos;s Wedding Day!</CountdownComplete>;
   } else {
     return (
       <CountdownText>

@@ -20,7 +20,6 @@ const IndexPage = () => {
 
   return (
     <>
-
       <SplashSection />
       <IntroSection />
       <NoticeSection />

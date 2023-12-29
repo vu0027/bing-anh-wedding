@@ -1,12 +1,3 @@
-import studio1 from 'public/photos/1.png';
-import studio2 from 'public/photos/2.png';
-import studio3 from 'public/photos/3.png';
-import studio4 from 'public/photos/4.png';
-import studio5 from 'public/photos/5.png';
-import studio6 from 'public/photos/6.png';
-import studio7 from 'public/photos/7.png';
-import studio8 from 'public/photos/8.png';
-
 import _1 from 'public/photos/PreWed/1.jpg';
 import _2 from 'public/photos/PreWed/2.jpg';
 import _3 from 'public/photos/PreWed/3.jpg';
@@ -46,7 +37,4 @@ export const STUDIO_PICS = [
   _15,
   _16,
 ];
-export const JEJU_PICS = [
-  _19,
-  _20
-];
+export const JEJU_PICS = [_17, _18, _19, _20];

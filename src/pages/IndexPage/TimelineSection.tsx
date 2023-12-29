@@ -13,8 +13,11 @@ const TimelineSection = () => {
             <td>
               <strong>Traditional Engagement</strong>
               <ul>
-                <li>Bing family will come to Anh family's house.</li>
-                <li>This event is reserved for family and relative only due to limited space.</li>
+                <li>Bing family will come to Anh family&apos;s house.</li>
+                <li>
+                  This event is reserved for family and relative only due to
+                  limited space.
+                </li>
               </ul>
             </td>
           </tr>
@@ -23,7 +26,11 @@ const TimelineSection = () => {
             <td>
               <strong>Church ceremony</strong>
               <ul>
-                <li>We would like to extend an invitation for everyone to join us at the church to witness and celebrate as we sign the marriage documents.</li>
+                <li>
+                  We would like to extend an invitation for everyone to join us
+                  at the church to witness and celebrate as we sign the marriage
+                  documents.
+                </li>
               </ul>
             </td>
           </tr>

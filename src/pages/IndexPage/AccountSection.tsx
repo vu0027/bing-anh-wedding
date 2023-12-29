@@ -30,22 +30,12 @@ const AccountSection = () => {
         contents={
           <div>
             <CopyInfo />
-            <Acocunt
-              bankName="Zelle"
-              accountNo="405 604 7365"
-              name="Anh Vu"
-            />
-            <Acocunt
-              bankName="Venmo"
-              accountNo="anhvucs"
-              name="Anh Vu"
-            />
+            <Acocunt bankName="Zelle" accountNo="405 604 7365" name="Anh Vu" />
+            <Acocunt bankName="Venmo" accountNo="anhvucs" name="Anh Vu" />
           </div>
         }
       />
-      <div>
-        We appreciate you making this happen.
-      </div>
+      <div>We appreciate you making this happen.</div>
     </Section>
   );
 };

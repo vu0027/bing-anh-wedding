@@ -47,9 +47,9 @@ const WelcomeText = () => {
       <p>
         We are getting married after 4 years together.
         <br />
-        It's hard to imagine time without each other, so
+        It&apos;s hard to imagine time without each other, so
         <br />
-        we're starting season 2 of our relationship.
+        we&apos;re starting season 2 of our relationship.
       </p>
 
       <p>
@@ -57,13 +57,12 @@ const WelcomeText = () => {
         <br />
         We would like to invite my guests to Clauren Ridge Vineyard and Winery
         <br />
-        We prepared delicious food and our favorite drinks.<br />
-        I hope you come and have fun.
+        We prepared delicious food and our favorite drinks.
+        <br />I hope you come and have fun.
       </p>
     </div>
   );
 };
-
 
 const InfoTable = () => {
   return (
@@ -73,7 +72,8 @@ const InfoTable = () => {
           <td>when</td>
           <td>
             Sunday, May 5, 2024
-            <br />Ceremony starts at 2PM, Party starts at 5PM.
+            <br />
+            Ceremony starts at 2PM, Party starts at 5PM.
           </td>
         </tr>
         <tr>

@@ -4,7 +4,6 @@ import { RSVPButton, YoutubeButton } from 'src/components/Button';
 import Section from 'src/components/Section';
 import Image from 'next/image';
 import tobox from 'public/tobox.png';
-import gift from 'public/gift.png';
 
 const NoticeSection = () => {
   return (
@@ -17,7 +16,9 @@ const NoticeSection = () => {
           question="How can I reservation?"
           answer={
             <>
-              If you are attending the party, please use the button below to inform us of the number of participants and meal options. It is very helpful in preparing 😄
+              If you are attending the party, please use the button below to
+              inform us of the number of participants and meal options. It is
+              very helpful in preparing 😄
               <RSVPButton style={{ marginTop: 3 }} />
             </>
           }
@@ -26,7 +27,10 @@ const NoticeSection = () => {
           question="What time can I go?"
           answer={
             <>
-              The ceremony starts at 2:00PM and photography is allowed from 1:00PM. After the ceremony, we will take some photo and go straight to the winery. I will be 30 minutes drive from church to the winery.
+              The ceremony starts at 2:00PM and photography is allowed from
+              1:00PM. After the ceremony, we will take some photo and go
+              straight to the winery. I will be 30 minutes drive from church to
+              the winery.
               <Image
                 src={tobox}
                 alt="Photo"
@@ -40,7 +44,8 @@ const NoticeSection = () => {
           question="Unfortunately, I couldn’t go."
           answer={
             <>
-              We will post our wedding video on Youtube when it is available so you can watch later.
+              We will post our wedding video on Youtube when it is available so
+              you can watch later.
               <YoutubeButton style={{ marginTop: 3 }} />
             </>
           }
