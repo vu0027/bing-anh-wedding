@@ -43,7 +43,7 @@ function QnA({
   return (
     <li>
       <strong>Q. {question}</strong>
-      <div style={{ padding: '0 0 1.6rem' }}>
+      <div style={{ padding: '0 0 1.6rem', whiteSpace: 'pre-wrap', overflow: 'hidden', wordBreak: 'break-all' }}>
         {answer}
         {question === translatedContent.usefulInfoSection.questions[2].question && (
           <YoutubeButton

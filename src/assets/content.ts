@@ -1,5 +1,6 @@
 const content = {
   en: {
+    date: "May 5th, 2024",
     mainHeading: "Bing and Anh are getting married.",
     days: 'days',
     hours: 'hours',
@@ -33,7 +34,7 @@ const content = {
       description31: 'Happy hour to take photos and enjoy a small snack.',
       description32: 'Enjoy our favorite BBQ, wines, cocktail slushes.',
       description33: 'Karaoke station.',
-      directionLink2: 'Click for direction to Clauren Ridge Vineyard and Winery'
+      directionLink2: 'Click for direction to Clauren Ridge Vineyard and Winery at Edmond, Oklahoma'
     },
     accountSection: {
       title: 'Honeymoon fund',
@@ -49,7 +50,7 @@ const content = {
       questions: [
         {
           question: "How can I reservation?",
-          answer: "If you are attending the party, please use the button below to inform us of the number of participants and meal options. It is very helpful in preparing 😄\n* If corrections are needed, please write again."
+          answer: "If you are attending the party, please use the button below to inform us of the number of participants and meal options. It is very helpful in preparing. * If corrections are needed, please write again."
         }, {
           question: "What time should I arrive?",
           answer: "The ceremony starts at 2:00 PM, and photography is allowed from 1:00 PM. After the ceremony, we will take some photos and go straight to the winery. It is approximately a 30-minute drive from the church to the winery."
@@ -59,7 +60,7 @@ const content = {
         },
       ]
     },
-    swipeRightMessage: "Swipe to the right for more pictures.",
+    swipeRightMessage: "Swipe to the left for more pictures.",
     invitation: {
       madeBy: "Made by Bing-Hao and Anh.",
       excitement: 'We are filled with excitement for our upcoming wedding',
@@ -68,6 +69,7 @@ const content = {
     }
   },
   zh: {
+    date: "2024 年 5 月 5 日",
     mainHeading: "我們要结婚了!",
     days: '天',
     hours: '小时',
@@ -114,7 +116,7 @@ const content = {
       questions: [
         {
           question: "如何報名參加？",
-          answer: "请使用下面的按鈕登記您參與的人數與任何飲食限制。有助於我們更好的為您準備餐點 😄\n* 如果需要更正，請重新登記一次。"
+          answer: "请使用下面的按鈕登記您參與的人數與任何飲食限制。有助於我們更好的為您準備餐點. * 如果需要更正，請重新登記一次。"
         }, {
           question: "應該甚麼時候到呢？",
           answer: "婚禮攝影將於下午一點開始，婚禮儀式將於下午兩點開始。儀式結束後，我們將共同合照留念。晚宴將於晚上五點開始，教堂到酒莊距離大约30分鐘車程。"
@@ -133,6 +135,7 @@ const content = {
     }
   },
   vi: {
+    date: "Ngày 5 tháng 5 năm 2024",
     mainHeading: "Bing và Anh sắp kết hôn.",
     days: 'ngày',
     hours: 'giờ',
@@ -142,7 +145,7 @@ const content = {
       paragraph1: "Chúng tôi sẽ kết hôn sau 4 năm bên nhau.",
       paragraph2: "Khó có thể tưởng tượng thời gian không có nhau, vì vậy ",
       paragraph3: "chúng tôi bắt đầu chương 2 của cuộc đời chúng tôi.",
-      paragraph4: "Chúng tôi sẽ tổ chức lễ thành hôn tại nhà thờ Công giáo Saint Andrew Dung-Lac.",
+      paragraph4: "Chúng tôi sẽ tổ chức lễ thành hôn tại nhà thờ Công giáo giáo xứ Thánh Andrew Dũng Lạc.",
       paragraph5: " Sau đó, chúng tôi muốn mời các bạn đến Clauren Ridge Vineyard and Winery.",
       paragraph6: "Chúng tôi đã chuẩn bị thức ăn ngon và đồ uống.",
       paragraph7: "Hy vọng bạn đến và có những giây phút vui vẻ và tuyệt vời.",
@@ -150,26 +153,26 @@ const content = {
     },
     timelineSection: {
       title: 'Lịch trình cho ngày',
-      time1: '9:00 AM',
-      event1: 'Lễ đính hôn truyền thống',
+      time1: '9:00 giờ sáng',
+      event1: 'Đám hỏi',
       description11: "Gia đình Bing sẽ đến nhà gia đình Anh.",
       description12: "Sự kiện này chỉ dành cho gia đình và người thân do không gian có hạn.",
-      time2: '2:00 PM',
+      time2: '2:00 giờ chiều',
       event2: 'Nghi lễ nhà thờ',
-      description2: 'Chúng tôi muốn mời tất cả mọi người tham gia nhà thờ để chứng kiến và ăn mừng khi chúng tôi ký kết...',
-      directionLink1: 'Nhấn để biết đường đến Nhà thờ Công giáo Saint Andrew Dung-Lac',
-      time3: '5:00 PM',
+      description2: 'Chúng tôi muốn mời tất cả mọi người tham gia nhà thờ để chứng kiến và ăn mừng khi chúng tôi ký giấy đăng ký kết hôn.',
+      directionLink1: 'Nhấn để biết đường đến Nhà thờ Công giáo Thánh Andrew Dũng Lạc',
+      time3: '5:00 giờ chiều',
       event3: 'Lễ kỷ niệm hôn nhân',
-      description31: 'Giờ hạnh phúc để chụp ảnh và thưởng thức một bữa nhẹ.',
+      description31: 'Khoảng thời gian để chụp ảnh, trò chuyện và thưởng thức thức ăn nhẹ.',
       description32: 'Thưởng thức BBQ, rượu vang, cocktail đá bào - các món ưa thích của chúng tôi.',
-      description33: 'Khu vực Karaoke.',
-      directionLink2: 'Nhấn để biết đường đến Clauren Ridge Vineyard and Winery'
+      description33: 'Khu vực Karaoke tự chọn.',
+      directionLink2: 'Nhấn để biết đường đến Clauren Ridge Vineyard and Winery tại Edmond, Oklahoma'
     },
     accountSection: {
       title: 'Quỹ trăng mật',
       viewG: 'Xem tài khoản Chú rể',
       viewB: 'Xem tài khoản Cô dâu',
-      appreciate: 'Chúng tôi đánh giá cao sự đóng góp của bạn.',
+      appreciate: 'Chúng tôi trân trọng biết ơn sự đóng góp của bạn để điều này có thể xảy ra.',
       clickToCopy: 'Nhấn để sao chép số tài khoản.'
     },
     rsvpSection: 'Nhấn để hồi đáp',
@@ -179,17 +182,18 @@ const content = {
       questions: [
         {
           question: "Làm thế nào để đặt chỗ?",
-          answer: "Nếu bạn tham gia tiệc, vui lòng sử dụng nút bên dưới để thông báo số lượng người tham dự và lựa chọn bữa ăn. Điều này rất hữu ích trong quá trình chuẩn bị 😄\n* Nếu cần điều chỉnh, vui lòng viết lại."
+          answer: "Nếu bạn tham gia tiệc, vui lòng sử dụng nút bên dưới để thông báo số lượng người tham dự và lựa chọn ăn kiêng tuyf chỉnh. Điều này rất hữu ích trong quá trình chuẩn bị."+
+          " * Nếu cần điều chỉnh, vui lòng viết lại."
         }, {
           question: "Tôi nên đến vào lúc nào?",
-          answer: "Lễ kết hôn bắt đầu lúc 2:00 PM và có thể chụp ảnh từ 1:00 PM. Sau lễ, chúng tôi sẽ chụp ảnh và đi thẳng đến nhà máy rượu. Từ nhà thờ đến nhà máy rượu có thể mất khoảng 30 phút."
+          answer: "Thánh Lễ kết hôn bắt đầu lúc 2:00 giờ chiều và có thể đến và chụp ảnh từ 1 giờ chiều. Sau lễ, chúng tôi sẽ chụp ảnh cùng với khách mời và đi thẳng đến Clauren Ridge Vineyard and Winery. Từ nhà thờ đến Clauren Ridge Vineyard and Winery có thể mất khoảng 30 phút lái xe."
         }, {
           question: "Thật không may, tôi không thể tham gia.",
-          answer: "Chúng tôi sẽ đăng video đám cưới của chúng tôi trên Youtube khi có sẵn để bạn xem sau này."
+          answer: "Chúng tôi sẽ đăng video đám cưới của chúng tôi trên Youtube khi có để bạn xem sau này."
         },
       ]
     },
-    swipeRightMessage: "Vuốt sang phải để xem thêm hình ảnh.",
+    swipeRightMessage: "Vuốt sang trái để xem thêm hình ảnh.",
     invitation: {
       madeBy: "Được làm bởi Bing-Hao và Anh.",
       excitement: 'Chúng tôi rất hồi hộp cho đám cưới sắp tới của mình',
