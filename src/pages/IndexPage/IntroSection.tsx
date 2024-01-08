@@ -4,14 +4,28 @@ import Section from 'src/components/Section';
 import Image from 'next/image';
 import { BorderedTable } from 'src/components/Table';
 import avatarImage from 'public/couple.png';
+import content from 'src/assets/content';
 
-const IntroSection = () => {
+const YouTubeEmbed = () => (
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/1zeqyqxMNUU"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+);
+
+const IntroSection = ({ selectedLanguage }: any) => {
+
   return (
     <Section backgroundColor={COLORS.highlight1}>
-      <WelcomeText />
+      <WelcomeText selectedLanguage={selectedLanguage} />
       <div style={{ position: 'relative' }}>
         <AvatarImage />
-        <InfoTable />
+        <InfoTable selectedLanguage={selectedLanguage} />
       </div>
     </Section>
   );
@@ -31,56 +45,52 @@ const AvatarImage = () => {
       <Image
         src={avatarImage}
         alt=""
-        // sizes="(min-width: 75em) 10vw,
-        //         (min-width: 48em) 10vw,
-        //         10vw"
-        // layout="responsive"
+        sizes="(min-width: 75em) 10vw,
+                (min-width: 48em) 10vw,
+                10vw"
+        layout="responsive"
         style={{ transform: 'scaleX(-1)' }}
       />
     </div>
   );
 };
 
-const WelcomeText = () => {
+const WelcomeText = ({ selectedLanguage }: any) => {
+  const translatedContent = (content as any)[selectedLanguage];
+
   return (
     <div>
       <p>
-        We are getting married after 4 years together.
+        {translatedContent && translatedContent.introSection.paragraph1}
         <br />
-        It&apos;s hard to imagine time without each other, so
+        {translatedContent && translatedContent.introSection.paragraph2}
         <br />
-        we&apos;re starting season 2 of our relationship.
+        {translatedContent && translatedContent.introSection.paragraph3}
       </p>
 
       <p>
-        We will do ceremony at Saint Andrew Dung-Lac Catholic Church.
+        {translatedContent && translatedContent.introSection.paragraph4}
         <br />
-        We would like to invite my guests to Clauren Ridge Vineyard and Winery
+        {translatedContent && translatedContent.introSection.paragraph5}
         <br />
-        We prepared delicious food and our favorite drinks.
-        <br />I hope you come and have fun.
+        {translatedContent && translatedContent.introSection.paragraph6}
+        <br />
+        {translatedContent && translatedContent.introSection.paragraph7}
       </p>
     </div>
   );
 };
 
-const InfoTable = () => {
+export const InfoTable = ({ selectedLanguage }: any) => {
+  const translatedContent = (content as any)[selectedLanguage];
+
   return (
     <BorderedTable style={{ margin: '3rem 0 9rem', position: 'relative' }}>
       <tbody>
         <tr>
-          <td>when</td>
+          <td>{translatedContent && translatedContent.introSection.paragraph8}</td>
           <td>
-            Sunday, May 5, 2024
-            <br />
-            Ceremony starts at 2PM, Party starts at 5PM.
-          </td>
-        </tr>
-        <tr>
-          <td>where</td>
-          <td>
-            Church: 3115 SW 59th St, Oklahoma City, OK 73159 <br />
-            Winery: 6000 W Waterloo Rd, Edmond, OK 73025
+            <YouTubeEmbed />
           </td>
         </tr>
       </tbody>

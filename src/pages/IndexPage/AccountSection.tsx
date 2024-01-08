@@ -3,6 +3,8 @@ import { COLORS } from 'src/assets/theme';
 import Collapsible from 'src/components/Collapsible';
 import Section from 'src/components/Section';
 import copyTextToClipboard from 'src/utils/copyToClipboard';
+import Image from 'next/image';
+import tobox from 'public/tobox.png';
 
 const AccountSection = () => {
   return (
@@ -12,12 +14,12 @@ const AccountSection = () => {
         contents={
           <div>
             <CopyInfo />
-            <Acocunt
+            <Account
               bankName="Zelle"
               accountNo="405 510 2655"
               name="Bing-Hao Chiang"
             />
-            <Acocunt
+            <Account
               bankName="Venmo"
               accountNo="Bing-Hao-Chiang"
               name="Bing-Hao Chiang"
@@ -30,10 +32,16 @@ const AccountSection = () => {
         contents={
           <div>
             <CopyInfo />
-            <Acocunt bankName="Zelle" accountNo="405 604 7365" name="Anh Vu" />
-            <Acocunt bankName="Venmo" accountNo="anhvucs" name="Anh Vu" />
+            <Account bankName="Zelle" accountNo="405 604 7365" name="Anh Vu" />
+            <Account bankName="Venmo" accountNo="anhvucs" name="Anh Vu" />
           </div>
         }
+      />
+      <Image
+        src={tobox}
+        alt="Photo"
+        draggable={false}
+        style={{ marginTop: 3, maxWidth: '35rem', height: 'auto' }}
       />
       <div>We appreciate you making this happen.</div>
     </Section>
@@ -46,7 +54,7 @@ const CopyInfo = () => (
   </div>
 );
 
-const Acocunt = ({
+const Account = ({
   bankName,
   accountNo,
   name,
@@ -66,11 +74,17 @@ const Acocunt = ({
         display: 'flex',
         justifyContent: 'space-between',
         marginBottom: 5,
+        transition: 'background 0.3s ease', // Add transition for smooth effect
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = '#ffffff'; // Change border color on hover
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = 'transparent'; // Reset border color on leave
       }}
     >
       <div>{bankName}</div>
       <div>{accountNo}</div>
-      <div>{name}</div>
     </div>
   );
 };

@@ -2,8 +2,6 @@ import React from 'react';
 import { COLORS } from 'src/assets/theme';
 import { RSVPButton, YoutubeButton } from 'src/components/Button';
 import Section from 'src/components/Section';
-import Image from 'next/image';
-import tobox from 'public/tobox.png';
 
 const NoticeSection = () => {
   return (
@@ -19,24 +17,23 @@ const NoticeSection = () => {
               If you are attending the party, please use the button below to
               inform us of the number of participants and meal options. It is
               very helpful in preparing 😄
+              <br />
               <RSVPButton style={{ marginTop: 3 }} />
+              <div style={{ fontSize: '0.9rem', marginTop: 10, paddingBottom: 0 }}>
+                * If corrections are needed, please write again.
+              </div>
             </>
           }
         />
         <QnA
-          question="What time can I go?"
+          question="What time should I arrive?"
           answer={
             <>
               The ceremony starts at 2:00PM and photography is allowed from
               1:00PM. After the ceremony, we will take some photo and go
               straight to the winery. I will be 30 minutes drive from church to
               the winery.
-              <Image
-                src={tobox}
-                alt="Photo"
-                draggable={false}
-                style={{ marginTop: 3 }}
-              />
+
             </>
           }
         />

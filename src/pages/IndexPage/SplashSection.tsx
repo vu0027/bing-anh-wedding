@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import Countdown from 'react-countdown';
+import content from 'src/assets/content';
+import { RSVPButton } from 'src/components/Button';
 
-const SplashSection = () => {
+const SplashSection = ({ selectedLanguage }: any) => {
   const [isClient, setIsClient] = useState(false);
   const weddingDate = new Date('May 5, 2024');
 
@@ -14,12 +16,13 @@ const SplashSection = () => {
     <SplashContainer>
       <JejuVideo />
       <FlexContainer>
-        <MainHeading>Bing and Anh are getting married.</MainHeading>
+        <MainHeading>{(content as any)[selectedLanguage].mainHeading}</MainHeading>
         <CountdownContainer>
           {isClient && (
-            <Countdown date={weddingDate} renderer={CountdownRenderer} />
-          )}
+            <Countdown date={weddingDate} renderer={(props) => <CountdownRenderer {...props} selectedLanguage={selectedLanguage} />} />
+            )}
         </CountdownContainer>
+        <RSVPButton />
       </FlexContainer>
     </SplashContainer>
   );
@@ -28,8 +31,10 @@ const SplashSection = () => {
 const SplashContainer = styled.div`
   height: 100vh;
   color: white;
-  font-family: 'Mea Culpa', sans-serif;
-  font-size: 50px;
+  font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 15px; /* Adjust the font size for smaller screens */
+  }
 `;
 
 const FlexContainer = styled.div`
@@ -46,7 +51,7 @@ const MainHeading = styled.h1`
 `;
 
 const CountdownContainer = styled.div`
-  font-size: 36px;
+  font-size: 6px;
   margin-bottom: 16px;
   color: #ffeb3b; /* Custom text color for the countdown */
 `;
@@ -57,32 +62,33 @@ const CountdownRenderer = ({
   minutes,
   seconds,
   completed,
+  selectedLanguage,
 }: any) => {
+  const translatedContent = (content as any)[selectedLanguage];
+
   if (completed) {
-    return <CountdownComplete>It&apos;s Wedding Day!</CountdownComplete>;
+    return <CountdownComplete>{translatedContent && translatedContent.mainHeading}</CountdownComplete>;
   } else {
     return (
       <CountdownText>
-        {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
+        {days} {translatedContent && translatedContent.days}, {hours} {translatedContent && translatedContent.hours}, {minutes} {translatedContent && translatedContent.minutes}, {seconds} {translatedContent && translatedContent.seconds}
       </CountdownText>
     );
   }
 };
 
 const CountdownText = styled.span`
-  font-size: 50px;
+  font-size: 20px;
   font-weight: bold;
-  color: #ffffff; /* Custom text color for the countdown */
+  color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 const CountdownComplete = styled.span`
   font-weight: bold;
   color: #4caf50; /* Custom text color for the completed countdown */
-`;
-
-const EventDetails = styled.div`
-  font-size: 18px;
-  color: #bdbdbd; /* Custom text color for event details */
 `;
 
 const JejuVideo = () => {
