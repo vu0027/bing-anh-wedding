@@ -1,31 +1,35 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import content from 'src/assets/content';
 import { GREYS } from 'src/assets/theme';
 
-const TimelineSection = () => {
+const Footer = ({ selectedLanguage }: any)  => {
+
+  const translatedContent = (content as any)[selectedLanguage].invitation;
+
   return (
-    <Footer>
-      <h3>Made by Bing-Hao and Anh</h3>
+    <FooterCSS>
+      <h3 style={{ fontSize: '1rem' }}>{translatedContent && translatedContent.madeBy}</h3>
       <table>
         <tbody>
           <tr>
-            <td>We are filled with excitement for our upcoming wedding</td>
+            <td style={{ fontSize: '0.8rem' }}>{translatedContent && translatedContent.excitement}</td>
           </tr>
           <tr>
-            <td>and we would love it if you could join us.</td>
+            <td style={{ fontSize: '0.8rem' }}>{translatedContent && translatedContent.love}</td>
           </tr>
           <tr>
-            <td>
-              It would mean a lot to have you there with us on this special day!
+            <td style={{ fontSize: '0.8rem' }}>
+              {translatedContent && translatedContent.mean}
             </td>
           </tr>
         </tbody>
       </table>
-    </Footer>
+    </FooterCSS>
   );
 };
 
-const Footer = styled.footer`
+const FooterCSS = styled.footer`
   background: ${GREYS.grey1};
   color: white;
   padding: 24px;
@@ -33,4 +37,4 @@ const Footer = styled.footer`
   justify-content: space-between;
 `;
 
-export default TimelineSection;
+export default Footer;

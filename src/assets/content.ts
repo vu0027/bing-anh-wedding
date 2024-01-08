@@ -56,25 +56,32 @@ const content = {
       title: "Useful information to know in advance.",
       questions: [
         {
-          question: "Q. How can I reservation?",
+          question: "How can I reservation?",
           answer:
             "If you are attending the party, please use the button below to inform us of the number of participants and meal options. It is very helpful in preparing 😄\n* If corrections are needed, please write again.",
         },
         {
-          question: "Q. What time should I arrive?",
+          question: "What time should I arrive?",
           answer:
             "The ceremony starts at 2:00 PM, and photography is allowed from 1:00 PM. After the ceremony, we will take some photos and go straight to the winery. It is approximately a 30-minute drive from the church to the winery.",
         },
         {
-          question: "Q. Unfortunately, I couldn’t go.",
+          question: "Unfortunately, I couldn’t go.",
           answer:
             "We will post our wedding video on Youtube when it is available so you can watch it later.",
         },
       ],
     },
+    swipeRightMessage: "Swipe to the right for more pictures.",
+    invitation: {
+      madeBy: "Made by Bing-Hao and Anh.",
+      excitement: 'We are filled with excitement for our upcoming wedding',
+      love: 'and we would love it if you could join us.',
+      mean: 'It would mean a lot to have you there with us on this special day!',
+    }
   },
   zh: {
-		mainHeading: "彬和安即将结婚。",
+		mainHeading: "秉澔和安即将结婚。",
 		days: '天',
     hours: '小时',
     minutes: '分钟',
@@ -93,7 +100,7 @@ const content = {
       title: '当天日程安排',
       time1: '9:00 AM',
       event1: '传统订婚仪式',
-      description11: "彬家将前来安家。",
+      description11: "秉澔家将前来安家。",
       description12: "由于空间有限，此活动仅限于家人和亲戚参加。",
       time2: '2:00 PM',
       event2: '教堂仪式',
@@ -119,20 +126,27 @@ const content = {
       title: "提前了解的有用信息。",
       questions: [
         {
-          question: "Q. 如何预订？",
+          question: "如何预订？",
           answer:
-            "如果您参加派对，请使用下面的按钮告诉我们参与人数和餐点选择。这对于准备非常有帮助 😄\n* 如果需要更正，请再次写下。",
+            "请使用下面的按钮告诉我 们参与人数和餐点选择。这对于准备非常有帮助 😄 * 如果需要更正，请再次写下。",
         },
         {
-          question: "Q. 我应该什么时候到达？",
+          question: "我应该什么时候到达？",
           answer:
             "仪式将于下午2:00开始，摄影从下午1:00开始。仪式结束后，我们将拍摄一些照片，然后直接前往葡萄园和酒庄。从教堂到酒庄需要大约30分钟的车程。",
         },
         {
-          question: "Q. 不幸的是，我不能去。",
+          question: "不幸的是，我不能去。",
           answer: "我们将在Youtube上发布我们的婚礼视频，供您稍后观看。",
         },
       ],
+    },
+    swipeRightMessage: "向右滑动查看更多照片。",
+    invitation: {
+      madeBy: "由秉澔和Anh制作。",
+      excitement: '我们对即将到来的婚礼充满期待',
+      love: '我们会很高兴如果你能加入我们。',
+      mean: '你的到场对我们来说意义非凡！',
     },
 	},
   vi: {
@@ -181,21 +195,28 @@ const content = {
       title: "Thông tin hữu ích cần biết trước.",
       questions: [
         {
-          question: "Q. Làm thế nào để đặt chỗ?",
+          question: "Làm thế nào để đặt chỗ?",
           answer:
             "Nếu bạn tham gia tiệc, vui lòng sử dụng nút bên dưới để thông báo số lượng người tham dự và lựa chọn bữa ăn. Điều này rất hữu ích trong quá trình chuẩn bị 😄\n* Nếu cần điều chỉnh, vui lòng viết lại.",
         },
         {
-          question: "Q. Tôi nên đến vào lúc nào?",
+          question: "Tôi nên đến vào lúc nào?",
           answer:
             "Lễ kết hôn bắt đầu lúc 2:00 PM và có thể chụp ảnh từ 1:00 PM. Sau lễ, chúng tôi sẽ chụp ảnh và đi thẳng đến nhà máy rượu. Từ nhà thờ đến nhà máy rượu có thể mất khoảng 30 phút.",
         },
         {
-          question: "Q. Thật không may, tôi không thể tham gia.",
+          question: "Thật không may, tôi không thể tham gia.",
           answer:
             "Chúng tôi sẽ đăng video đám cưới của chúng tôi trên Youtube khi có sẵn để bạn xem sau này.",
         },
       ],
+    },
+    swipeRightMessage: "Vuốt sang phải để xem thêm hình ảnh.",
+    invitation: {
+      madeBy: "Được làm bởi Bing-Hao và Anh.",
+      excitement: 'Chúng tôi rất hồi hộp cho đám cưới sắp tới của mình',
+      love: 'và chúng tôi sẽ rất vui mừng nếu bạn có thể tham gia cùng chúng tôi.',
+      mean: 'Điều này sẽ có ý nghĩa rất lớn nếu bạn có mặt cùng chúng tôi trong ngày đặc biệt này!',
     },
   },
 };

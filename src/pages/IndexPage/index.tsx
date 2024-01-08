@@ -24,19 +24,14 @@ const IndexPage = () => {
   };
   return (
     <>
-      <LanguageDropdown
-          selectedLanguage={selectedLanguage}
-          onSelectLanguage={handleSelectLanguage}
-      />
-
+      <LanguageDropdown selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
       <SplashSection selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
       <IntroSection selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
       <TimelineSection selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
       <AccountSection selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
       <NoticeSection selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
       <GallarySection selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
-
-      <Footer />
+      <Footer selectedLanguage={selectedLanguage} onSelectLanguage={handleSelectLanguage} />
     </>
   );
 };

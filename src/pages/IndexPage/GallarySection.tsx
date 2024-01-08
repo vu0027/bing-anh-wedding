@@ -3,7 +3,9 @@ import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import styled from '@emotion/styled';
 import { JEJU_PICS, STUDIO_PICS } from 'src/assets/images';
-import { VerticalCarousel } from 'src/components/VerticalCarousel';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import content from 'src/assets/content';
 
 const Heading = styled.h3`
   font-size: 1rem;
@@ -32,45 +34,35 @@ const AnimatedWrapper = styled.div<{ delay?: string }>`
   }
 `;
 
-const StyledVerticalCarousel = styled(VerticalCarousel)`
-  border: 2px solid ${COLORS.highlight2};
-  border-radius: 8px;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 0 auto;
-`;
-
-const GallarySection = () => {
+const GallarySection = ({ selectedLanguage }: any)  => {
+  const translatedContent = (content as any)[selectedLanguage].accountSection;
   return (
-    <Section backgroundColor={COLORS.highlight3} title={`Gallery`}>
+    <Section backgroundColor="white" title={`Gallery`}>
       <AnimatedWrapper>
-        <StyledVerticalCarousel
-          images={STUDIO_PICS}
-          alt="prewedding"
-          showSmallerImageOnMobile={true}
-        />
+        <Carousel showThumbs={false} showStatus={false}>
+          {STUDIO_PICS.map((image, index) => (
+            <div key={index}>
+              <img src={image.src} alt={`prewedding-${index}`} />
+            </div>
+          ))}
+        </Carousel>
       </AnimatedWrapper>
       <Heading style={{ marginTop: 48 }}>
-        Swipe to the right for more pictures.
+        {translatedContent && translatedContent.swipeRightMessage}
       </Heading>
       <AnimatedWrapper delay="0.2s">
-        <StyledVerticalCarousel alt="dating" images={JEJU_PICS} />
+        <Carousel showThumbs={false} showStatus={false}>
+          {JEJU_PICS.map((image, index) => (
+            <div key={index}>
+              <img src={image.src} alt={`dating-${index}`} />
+            </div>
+          ))}
+        </Carousel>
       </AnimatedWrapper>
-      <Heading style={{ marginTop: 48 }}>Dating Photos</Heading>
     </Section>
   );
 };
 
-const YouTubeEmbed = () => (
-  <iframe
-    width="100%"
-    height="315"
-    src="https://www.youtube.com/embed/SVtq2m0853s?controls=0&amp;autoplay=1&amp;mute=1"
-    title="YouTube video player"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-);
+
 
 export default GallarySection;

@@ -9,7 +9,7 @@ const NoticeSection = ({ selectedLanguage }: any) => {
 
   return (
     <Section
-      backgroundColor={COLORS.highlight3}
+      backgroundColor={COLORS.highlight1}
       title={translatedContent.usefulInfoSection.title}
     >
       <ul style={{ listStyle: 'none', margin: 0 }}>

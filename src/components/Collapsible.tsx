@@ -22,7 +22,6 @@ const Collapsible = ({
 };
 
 const Container = styled.div`
-  background: ${COLORS.highlight3};
   border-radius: 6px;
   margin-bottom: 12px;
   padding: 10px 13px;

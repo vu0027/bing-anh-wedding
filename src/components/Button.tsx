@@ -9,7 +9,7 @@ export const YoutubeButton = ({ style, selectedLanguage }: { style?: React.CSSPr
     <Button
       variant="contained"
       onClick={() => window.open('https://youtu.be')}
-      style={{ borderRadius: '18px', ...style }}
+      style={{ borderRadius: '18px', background: '#ff0000', ...style }}
     >
       {translatedContent.youtubeButton}
     </Button>
@@ -25,7 +25,7 @@ export const RSVPButton = ({ style, selectedLanguage }: { style?: React.CSSPrope
         onClick={() => {
           window.open('https://forms.gle/EwxwJWqd96f3h3M5A');
         }}
-        style={{ borderRadius: '18px', ...style }}
+        style={{ borderRadius: '18px', background: '#ff7991', ...style }}
       >
         {translatedContent.rsvpSection}
       </Button>
