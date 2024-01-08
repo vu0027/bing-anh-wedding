@@ -22,7 +22,7 @@ const SplashSection = ({ selectedLanguage }: any) => {
             <Countdown date={weddingDate} renderer={(props) => <CountdownRenderer {...props} selectedLanguage={selectedLanguage} />} />
             )}
         </CountdownContainer>
-        <RSVPButton />
+        <RSVPButton selectedLanguage={selectedLanguage}/>
       </FlexContainer>
     </SplashContainer>
   );

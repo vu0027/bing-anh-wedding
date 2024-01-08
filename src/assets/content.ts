@@ -1,13 +1,6 @@
 const content = {
   en: {
 		mainHeading: "Bing and Anh are getting married.",
-    scheduleTitle: 'Schedule for the day',
-    engagement: 'Traditional Engagement',
-    engagementDescription: 'Bing family will come to Anh family\'s house...',
-    churchCeremony: 'Church ceremony',
-    churchCeremonyDescription: 'We would like to extend an invitation for everyone...',
-    weddingCelebration: 'Wedding Celebration',
-    weddingCelebrationDescription: 'Happy hour to take photos and enjoy a small snack...',
 		days: 'days',
     hours: 'hours',
     minutes: 'minutes',
@@ -31,16 +24,57 @@ const content = {
 				"Checkout wedding proposal video",
 
     },
+		timelineSection: {
+			title: 'Schedule for the day',
+      time1: '9:00 AM',
+      event1: 'Traditional Engagement',
+      description11: "Bing family will come to Anh family's house.",
+      description12: "This event is reserved for family and relatives only due to limited space.",
+
+      time2: '2:00 PM',
+      event2: 'Church ceremony',
+      description2: 'We would like to extend an invitation for everyone to join us at the church to witness and celebrate as we sign the marriage documents.',
+      directionLink1: 'Click for direction to Saint Andrew Dung-Lac Catholic Church',
+
+      time3: '5:00 PM',
+      event3: 'Wedding Celebration',
+      description31: 'Happy hour to take photos and enjoy a small snack.',
+			description32: 'Enjoy our favorite BBQ, wines, cocktail slushes.',
+			description33: 'Karaoke station.',
+      directionLink2: 'Click for direction to Clauren Ridge Vineyard and Winery',
+    },
+    accountSection: {
+      title: 'Honeymoon fund',
+      viewG: 'View Groom Account',
+      viewB: 'View Bride Account',
+      appreciate: 'We appreciate you making this happen.',
+      clickToCopy: 'Click to copy the account number.'
+    },
+    rsvpSection: 'R.S.V.P',
+    youtubeButton: 'Wedding Video',
+    usefulInfoSection: {
+      title: "Useful information to know in advance.",
+      questions: [
+        {
+          question: "Q. How can I reservation?",
+          answer:
+            "If you are attending the party, please use the button below to inform us of the number of participants and meal options. It is very helpful in preparing 😄\n* If corrections are needed, please write again.",
+        },
+        {
+          question: "Q. What time should I arrive?",
+          answer:
+            "The ceremony starts at 2:00 PM, and photography is allowed from 1:00 PM. After the ceremony, we will take some photos and go straight to the winery. It is approximately a 30-minute drive from the church to the winery.",
+        },
+        {
+          question: "Q. Unfortunately, I couldn’t go.",
+          answer:
+            "We will post our wedding video on Youtube when it is available so you can watch it later.",
+        },
+      ],
+    },
   },
   zh: {
 		mainHeading: "彬和安即将结婚。",
-		scheduleTitle: '当天日程安排',
-		engagement: '传统订婚仪式',
-		engagementDescription: '彬家将前来安家。 由于空间有限，本事件仅限于家庭和亲戚...',
-		churchCeremony: '教堂仪式',
-		churchCeremonyDescription: '我们邀请大家参加教堂，见证并庆祝我们签署结婚文件...',
-		weddingCelebration: '婚礼庆祝',
-		weddingCelebrationDescription: '欢乐时光拍照留影，享用小吃。 享受我们最喜欢的烧烤，葡萄酒...',
 		days: '天',
     hours: '小时',
     minutes: '分钟',
@@ -55,16 +89,54 @@ const content = {
       paragraph7: "希望你们来参加并玩得开心。",
 			paragraph8: "查看求婚视频",
     },
+    timelineSection: {
+      title: '当天日程安排',
+      time1: '9:00 AM',
+      event1: '传统订婚仪式',
+      description11: "彬家将前来安家。",
+      description12: "由于空间有限，此活动仅限于家人和亲戚参加。",
+      time2: '2:00 PM',
+      event2: '教堂仪式',
+      description2: '我们邀请大家参加教堂，见证并庆祝我们签署结婚文件.',
+      directionLink1: '点击获取前往Saint Andrew Dung-Lac天主教堂的方向',
+      time3: '5:00 PM',
+      event3: '婚礼庆祝',
+      description31: '歡樂時光拍照留影，並享受一點小吃。',
+      description32: '品嚐我們最喜愛的燒烤、葡萄酒和雞尾酒冰沙。',
+      description33: '卡拉OK區。',
+      directionLink2: '點擊查看前往Clauren Ridge葡萄園和酒莊的方向',
+    },
+    accountSection: {
+      title: '蜜月基金',
+      viewG: '查看新郎账户',
+      viewB: '查看新娘账户',
+      appreciate: '我们感激您让这成为可能。',
+      clickToCopy: '点击复制账号。',
+    },
+    rsvpSection: '请回复',
+    youtubeButton: '婚礼视频',
+    usefulInfoSection: {
+      title: "提前了解的有用信息。",
+      questions: [
+        {
+          question: "Q. 如何预订？",
+          answer:
+            "如果您参加派对，请使用下面的按钮告诉我们参与人数和餐点选择。这对于准备非常有帮助 😄\n* 如果需要更正，请再次写下。",
+        },
+        {
+          question: "Q. 我应该什么时候到达？",
+          answer:
+            "仪式将于下午2:00开始，摄影从下午1:00开始。仪式结束后，我们将拍摄一些照片，然后直接前往葡萄园和酒庄。从教堂到酒庄需要大约30分钟的车程。",
+        },
+        {
+          question: "Q. 不幸的是，我不能去。",
+          answer: "我们将在Youtube上发布我们的婚礼视频，供您稍后观看。",
+        },
+      ],
+    },
 	},
   vi: {
 		mainHeading: "Bing và Anh sắp kết hôn.",
-    scheduleTitle: 'Lịch trình cho ngày',
-    engagement: 'Lễ đính hôn truyền thống',
-    engagementDescription: 'Gia đình Bing sẽ đến nhà gia đình Anh. Sự kiện này chỉ dành cho gia đình và người thân...',
-    churchCeremony: 'Nghi lễ nhà thờ',
-    churchCeremonyDescription: 'Chúng tôi muốn mời tất cả mọi người tham gia nhà thờ để chứng kiến và ăn mừng khi chúng tôi ký kết...',
-    weddingCelebration: 'Lễ kỷ niệm hôn nhân',
-    weddingCelebrationDescription: 'Giờ hạnh phúc để chụp ảnh và thưởng thức một bữa nhẹ. Thưởng thức BBQ, rượu vang...',
 		days: 'ngày',
     hours: 'giờ',
     minutes: 'phút',
@@ -78,6 +150,52 @@ const content = {
       paragraph6: "Chúng tôi đã chuẩn bị thức ăn ngon và đồ uống.",
       paragraph7: "Hy vọng bạn đến và có những giây phút vui vẻ và tuyệt vời.",
 			paragraph8: "Xem video cầu hôn",
+    },
+		timelineSection: {
+      title: 'Lịch trình cho ngày',
+      time1: '9:00 AM',
+      event1: 'Lễ đính hôn truyền thống',
+      description11: "Gia đình Bing sẽ đến nhà gia đình Anh.",
+      description12: "Sự kiện này chỉ dành cho gia đình và người thân do không gian có hạn.",
+      time2: '2:00 PM',
+      event2: 'Nghi lễ nhà thờ',
+      description2: 'Chúng tôi muốn mời tất cả mọi người tham gia nhà thờ để chứng kiến và ăn mừng khi chúng tôi ký kết...',
+      directionLink1: 'Nhấn để biết đường đến Nhà thờ Công giáo Saint Andrew Dung-Lac',
+      time3: '5:00 PM',
+      event3: 'Lễ kỷ niệm hôn nhân',
+      description31: 'Giờ hạnh phúc để chụp ảnh và thưởng thức một bữa nhẹ.',
+      description32: 'Thưởng thức BBQ, rượu vang, cocktail đá bào - các món ưa thích của chúng tôi.',
+      description33: 'Khu vực Karaoke.',
+      directionLink2: 'Nhấn để biết đường đến Clauren Ridge Vineyard and Winery',
+    },
+    accountSection: {
+      title: 'Quỹ trăng mật',
+      viewG: 'Xem tài khoản Chú rể',
+      viewB: 'Xem tài khoản Cô dâu',
+      appreciate: 'Chúng tôi đánh giá cao sự đóng góp của bạn.',
+      clickToCopy: 'Nhấn để sao chép số tài khoản.',
+    },
+    rsvpSection: 'Nhấn để hồi đáp',
+    youtubeButton: 'Video Đám cưới',
+    usefulInfoSection: {
+      title: "Thông tin hữu ích cần biết trước.",
+      questions: [
+        {
+          question: "Q. Làm thế nào để đặt chỗ?",
+          answer:
+            "Nếu bạn tham gia tiệc, vui lòng sử dụng nút bên dưới để thông báo số lượng người tham dự và lựa chọn bữa ăn. Điều này rất hữu ích trong quá trình chuẩn bị 😄\n* Nếu cần điều chỉnh, vui lòng viết lại.",
+        },
+        {
+          question: "Q. Tôi nên đến vào lúc nào?",
+          answer:
+            "Lễ kết hôn bắt đầu lúc 2:00 PM và có thể chụp ảnh từ 1:00 PM. Sau lễ, chúng tôi sẽ chụp ảnh và đi thẳng đến nhà máy rượu. Từ nhà thờ đến nhà máy rượu có thể mất khoảng 30 phút.",
+        },
+        {
+          question: "Q. Thật không may, tôi không thể tham gia.",
+          answer:
+            "Chúng tôi sẽ đăng video đám cưới của chúng tôi trên Youtube khi có sẵn để bạn xem sau này.",
+        },
+      ],
     },
   },
 };
