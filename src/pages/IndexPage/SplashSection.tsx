@@ -1,10 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import Countdown from 'react-countdown';
 import content from 'src/assets/content';
 import { RSVPButton } from 'src/components/Button';
 
 const SplashSection = ({ selectedLanguage }: any) => {
+  const [typedDate, setTypedDate] = useState('');
+  const fullDate = "May 5th, 2024";
+
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const typeNextCharacter = () => {
+      if (currentIndex < fullDate.length) {
+        setTypedDate(prevTypedDate => prevTypedDate + fullDate[currentIndex]);
+        currentIndex += 1;
+      }
+    };
+
+    const typingInterval = setInterval(typeNextCharacter, 500); // Adjust the typing speed here
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(typingInterval);
+  }, []); // Empty dependency array to run the effect only once on mount
+
   const [isClient, setIsClient] = useState(false);
   const weddingDate = new Date('May 5, 2024');
 
@@ -17,6 +36,7 @@ const SplashSection = ({ selectedLanguage }: any) => {
       <JejuVideo />
       <FlexContainer>
         <MainHeading>{(content as any)[selectedLanguage].mainHeading}</MainHeading>
+        <p style={{fontFamily: 'Pacifico, cursive', fontSize: '25px'}}>{typedDate}</p>
         <CountdownContainer>
           {isClient && (
             <Countdown date={weddingDate} renderer={(props) => <CountdownRenderer {...props} selectedLanguage={selectedLanguage} />} />
@@ -92,8 +112,48 @@ const CountdownComplete = styled.span`
 `;
 
 const JejuVideo = () => {
+  const videoRef = useRef<any>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+  };
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const handleEnded = () => {
+      // Video has ended, restart playback
+      video.currentTime = 0;
+      video.play();
+    };
+
+    video.addEventListener('play', handlePlay);
+    video.addEventListener('pause', handlePause);
+    video.addEventListener('ended', handleEnded);
+
+    // Start playing when the component mounts
+    if (isPlaying) {
+      video.play().catch((error: any) => {
+        // Autoplay may be blocked, handle the error
+        console.error('Autoplay blocked:', error);
+      });
+    }
+
+    return () => {
+      video.removeEventListener('play', handlePlay);
+      video.removeEventListener('pause', handlePause);
+      video.removeEventListener('ended', handleEnded);
+    };
+  }, [isPlaying]);
+
   return (
     <video
+      ref={videoRef}
       controls={false}
       loop
       muted
@@ -108,7 +168,7 @@ const JejuVideo = () => {
         opacity: 0.7,
       }}
     >
-      <source src={'/binganh.mp4'} />
+      <source src={'/binganh.mp4'} type="video/mp4" />
     </video>
   );
 };

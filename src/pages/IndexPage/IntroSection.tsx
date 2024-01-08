@@ -3,7 +3,7 @@ import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import Image from 'next/image';
 import { BorderedTable } from 'src/components/Table';
-import avatarImage from 'public/couple.png';
+import avatarImage from 'public/couple1.png';
 import content from 'src/assets/content';
 
 const YouTubeEmbed = () => (
@@ -49,7 +49,6 @@ const AvatarImage = () => {
                 (min-width: 48em) 10vw,
                 10vw"
         layout="responsive"
-        style={{ transform: 'scaleX(-1)' }}
       />
     </div>
   );

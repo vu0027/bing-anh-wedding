@@ -52,10 +52,13 @@ function QnA({
           />
         )}
         {question === translatedContent.usefulInfoSection.questions[0].question && (
-          <RSVPButton
-            selectedLanguage={selectedLanguage}
-            style={{ marginTop: 3 }}
-          />
+          <React.Fragment>
+            <br />
+            <RSVPButton
+              selectedLanguage={selectedLanguage}
+              style={{ marginTop: 3 }}
+            />
+          </React.Fragment>
         )}
       </div>
     </li>
