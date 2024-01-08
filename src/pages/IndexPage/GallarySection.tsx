@@ -1,5 +1,4 @@
 import React from 'react';
-import { COLORS } from 'src/assets/theme';
 import Section from 'src/components/Section';
 import styled from '@emotion/styled';
 import { JEJU_PICS, STUDIO_PICS } from 'src/assets/images';
