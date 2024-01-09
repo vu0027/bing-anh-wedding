@@ -11,7 +11,7 @@ import { css, Global } from '@emotion/react';
 
 const globalStyles = css`
   td, li {
-    word-break: break-all;
+    word-break: break-word;
   }
 `;
 
