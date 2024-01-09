@@ -153,6 +153,7 @@ const JejuVideo = () => {
 
   return (
     <video
+      preload="metadata"
       ref={videoRef}
       controls={false}
       loop

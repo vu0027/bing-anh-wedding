@@ -42,4 +42,5 @@ export const TimelineTable = styled.table`
     list-style: lower-roman;
     margin: 0 0.9rem;
   }
+  overflow: hidden;
 `;
