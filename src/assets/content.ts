@@ -182,7 +182,7 @@ const content = {
       questions: [
         {
           question: "Làm thế nào để đặt chỗ?",
-          answer: "Nếu bạn tham gia tiệc, vui lòng sử dụng nút bên dưới để thông báo số lượng người tham dự và lựa chọn ăn kiêng tuyf chỉnh. Điều này rất hữu ích trong quá trình chuẩn bị."+
+          answer: "Nếu bạn tham gia tiệc, vui lòng sử dụng nút bên dưới để thông báo số lượng người tham dự và lựa chọn ăn kiêng tùy chỉnh. Điều này rất hữu ích trong quá trình chuẩn bị."+
           " * Nếu cần điều chỉnh, vui lòng viết lại."
         }, {
           question: "Tôi nên đến vào lúc nào?",
