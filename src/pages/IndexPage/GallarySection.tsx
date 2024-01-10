@@ -54,6 +54,7 @@ const GallarySection = ({ selectedLanguage }: any)  => {
     border: 10px solid ${COLORS.highlight1};
     border-radius: 50px;
     overflow: hidden;
+    width: 100%;
   `;
 
   return (
