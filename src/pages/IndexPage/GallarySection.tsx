@@ -58,12 +58,11 @@ const GallarySection = ({ selectedLanguage }: any)  => {
   return (
     <Section backgroundColor="white" title={`Gallery`}>
       <AnimatedWrapper>
-        {/* Wrap Carousel component with the CarouselFrame */}
         <CarouselFrame>
           <Carousel showThumbs={false} showStatus={false}>
             {STUDIO_PICS.map((image, index) => (
               <div key={index}>
-                <img src={image.src} alt={`prewedding-${index}`} />
+                <img style={{overflow: 'hidden'}} src={image.src} alt={`prewedding-${index}`} />
               </div>
             ))}
           </Carousel>
