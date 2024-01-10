@@ -100,7 +100,7 @@ const CountdownRenderer = ({
 const CountdownText = styled.span`
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #faf4f4;
   @media (max-width: 768px) {
     font-size: 15px;
   }
@@ -166,7 +166,7 @@ const JejuVideo = () => {
         objectFit: 'cover',
         position: 'absolute',
         zIndex: -1,
-        opacity: 0.7,
+        opacity: 0.6,
       }}
     >
       <source src={'/binganh.mp4'} type="video/mp4" />

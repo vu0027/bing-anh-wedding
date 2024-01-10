@@ -1,10 +1,11 @@
 import React from 'react';
 import Section from 'src/components/Section';
 import styled from '@emotion/styled';
-import { JEJU_PICS, STUDIO_PICS } from 'src/assets/images';
+import { STUDIO_PICS } from 'src/assets/images';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import content from 'src/assets/content';
+import { COLORS } from 'src/assets/theme';
 
 const Heading = styled.h3`
   font-size: 1rem;
@@ -33,35 +34,48 @@ const AnimatedWrapper = styled.div<{ delay?: string }>`
   }
 `;
 
+const YouTubeEmbed = () => (
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/5I2UPxa9wxs"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+);
+
 const GallarySection = ({ selectedLanguage }: any)  => {
   const translatedContent = (content as any)[selectedLanguage].accountSection;
+
+  const CarouselFrame = styled.div`
+    border: 10px solid ${COLORS.highlight1};
+    border-radius: 50px;
+    overflow: hidden;
+  `;
+
   return (
     <Section backgroundColor="white" title={`Gallery`}>
       <AnimatedWrapper>
-        <Carousel showThumbs={false} showStatus={false}>
-          {STUDIO_PICS.map((image, index) => (
-            <div key={index}>
-              <img src={image.src} alt={`prewedding-${index}`} />
-            </div>
-          ))}
-        </Carousel>
+        {/* Wrap Carousel component with the CarouselFrame */}
+        <CarouselFrame>
+          <Carousel showThumbs={false} showStatus={false}>
+            {STUDIO_PICS.map((image, index) => (
+              <div key={index}>
+                <img src={image.src} alt={`prewedding-${index}`} />
+              </div>
+            ))}
+          </Carousel>
+        </CarouselFrame>
       </AnimatedWrapper>
       <Heading style={{ marginTop: 48 }}>
         {translatedContent && translatedContent.swipeRightMessage}
       </Heading>
-      <AnimatedWrapper delay="0.2s">
-        <Carousel showThumbs={false} showStatus={false}>
-          {JEJU_PICS.map((image, index) => (
-            <div key={index}>
-              <img src={image.src} alt={`dating-${index}`} />
-            </div>
-          ))}
-        </Carousel>
-      </AnimatedWrapper>
+      <p>Many more to come ❤️❤️❤️.</p>
+      <YouTubeEmbed />
     </Section>
   );
 };
-
-
 
 export default GallarySection;

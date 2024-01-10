@@ -16,7 +16,6 @@ const Section = ({
       style={{
         background: backgroundColor,
         padding: `${GAP}px 16px`,
-        borderBottom: '1px solid black',
         ...style,
       }}
     >

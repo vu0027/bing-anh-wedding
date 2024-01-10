@@ -78,28 +78,28 @@ const content = {
     introSection: {
       paragraph1: "我們一起走過四年的時光",
       paragraph2: "很難想像沒有對方的日子",
-      paragraph3: "所以我們決定攜手踏上了我們人生的下一章。",
+      paragraph3: "所以我們決定攜手踏上了我們人生的下一章",
       paragraph4: "謹訂於2024年5月5日下午兩點在Saint Andrew Dung-Lac天主教堂舉行結婚典禮",
-      paragraph5: "同晚五點將在Clauren Ridge葡萄園酒莊舉行晚宴。",
-      paragraph6: "我們準備了美食佳餚。",
-      paragraph7: "敬請您一同前來見證。",
+      paragraph5: "同晚五點將在Clauren Ridge葡萄園酒莊舉行晚宴",
+      paragraph6: "我們準備了美食佳餚",
+      paragraph7: "敬請您一同前來見證",
       paragraph8: "點此觀看求婚影片"
     },
     timelineSection: {
       title: '當日行程安排',
       time1: '上午9:00 ',
       event1: '傳統訂婚儀式',
-      description11: "男方將前往女方家迎娶。",
-      description12: "鑑於場地空間有限，此活動將限制名額參與。",
+      description11: "男方將前往女方家迎娶",
+      description12: "鑑於場地空間有限，此活動僅限親屬參加",
       time2: '下午2:00 ',
       event2: '教堂結婚典禮',
-      description2: '誠摯邀請您共同見證我們的結婚儀式.',
+      description2: '誠摯邀請您共同見證我們的結婚儀式',
       directionLink1: '請點擊此連結查看Saint Andrew Dung - Lac天主教堂位置 ',
       time3: '晚上5:00 ',
       event3: '葡萄園酒莊婚宴',
-      description31: '歡樂時光拍照留影時間，並享受一點開胃菜。',
-      description32: '敬邀您品嚐我們最喜愛的美式燒烤、葡萄酒和雞尾酒冰沙。',
-      description33: '現場將提供卡拉OK歡唱。',
+      description31: '與新人拍照留影時間，並享受開胃菜',
+      description32: '敬邀您品嚐我們最愛的美式燒烤、葡萄酒和雞尾酒冰沙。',
+      description33: '現場提供卡拉OK同樂',
       directionLink2: '請點擊此連結查看Clauren Ridge葡萄園酒莊位置'
     },
     accountSection: {
@@ -116,10 +116,10 @@ const content = {
       questions: [
         {
           question: "如何報名參加？",
-          answer: "请使用下面的按鈕登記您參與的人數與任何飲食限制。有助於我們更好的為您準備餐點. * 如果需要更正，請重新登記一次。"
+          answer: "请使用下面的按鈕登記您參與的人數與任何飲食限制，有助於我們更好的為您準備餐點. * 如果需要更正，請重新登記一次。"
         }, {
           question: "應該甚麼時候到呢？",
-          answer: "婚禮攝影將於下午一點開始，婚禮儀式將於下午兩點開始。儀式結束後，我們將共同合照留念。晚宴將於晚上五點開始，教堂到酒莊距離大约30分鐘車程。"
+          answer: "婚禮攝影將於下午一點開始，婚禮儀式於下午兩點開始。儀式結束後，我們將共同合照留念。晚宴將於晚上五點開始，教堂到酒莊距離大约30分鐘車程。"
         }, {
           question: "我如果無法參加呢?",
           answer: "我們將在Youtube上直播，歡迎您線上共同參與。"
@@ -129,9 +129,9 @@ const content = {
     swipeRightMessage: "向右滑查看更多照片。",
     invitation: {
       madeBy: "由Bing和Anh制作。",
-      excitement: '我們非常期待即將到來的婚禮',
-      love: '我們很期待您能共同參與。',
-      mean: '您的參與是對我們意義重大！'
+      excitement: '我們期待即將到來的婚禮',
+      love: '也期待您能共同參與。',
+      mean: '您的參與對我們意義重大！'
     }
   },
   vi: {

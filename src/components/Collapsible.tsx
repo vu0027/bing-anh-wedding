@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import { COLORS } from 'src/assets/theme';
 
 const Collapsible = ({
   title,
@@ -26,7 +27,7 @@ const Container = styled.div`
   padding: 10px 13px;
   border: 1px solid #fff;
   cursor: pointer;
-  background: rgb(233 212 231);
+  background: ${COLORS.highlight1};
   &:hover {
     border-color: grey;
   }

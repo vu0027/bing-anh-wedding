@@ -48,7 +48,7 @@ function QnA({
         {question === translatedContent.usefulInfoSection.questions[2].question && (
           <YoutubeButton
             selectedLanguage={selectedLanguage}
-            style={{ marginTop: 3 }}
+            style={{ marginTop: 10 }}
           />
         )}
         {question === translatedContent.usefulInfoSection.questions[0].question && (
@@ -56,7 +56,7 @@ function QnA({
             <br />
             <RSVPButton
               selectedLanguage={selectedLanguage}
-              style={{ marginTop: 3 }}
+              style={{ marginTop: 10 }}
             />
           </React.Fragment>
         )}

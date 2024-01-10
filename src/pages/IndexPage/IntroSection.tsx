@@ -45,9 +45,6 @@ const AvatarImage = () => {
       <Image
         src={avatarImage}
         alt=""
-        sizes="(min-width: 75em) 10vw,
-                (min-width: 48em) 10vw,
-                10vw"
         layout="responsive"
       />
     </div>

@@ -2,12 +2,7 @@ import styled from '@emotion/styled';
 
 export const BorderedTable = styled.table`
   border-top: 1px solid black;
-  /* border-bottom: 1px solid black; */
   width: 100%;
-
-  tr:first-child td {
-    border-bottom: 1px solid black;
-  }
 
   td:first-child {
     font-weight: 700;
