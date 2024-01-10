@@ -50,6 +50,7 @@ const GallarySection = ({ selectedLanguage }: any)  => {
   const translatedContent = (content as any)[selectedLanguage].accountSection;
 
   const CarouselFrame = styled.div`
+    display: flex;
     border: 10px solid ${COLORS.highlight1};
     border-radius: 50px;
     overflow: hidden;
