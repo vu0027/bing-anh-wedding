@@ -12,7 +12,7 @@ const NoticeSection = ({ selectedLanguage }: any) => {
       backgroundColor={COLORS.highlight1}
       title={translatedContent.usefulInfoSection.title}
     >
-      <ul style={{ listStyle: 'none', margin: 0 }}>
+      <ul style={{ listStyle: 'none', margin: 0, fontSize: '0.85rem' }}>
         {translatedContent.usefulInfoSection.questions.map(
           (qna: any, index: number) => (
             <QnA
@@ -46,10 +46,13 @@ function QnA({
       <div style={{ padding: '0 0 1.6rem', whiteSpace: 'pre-wrap', overflow: 'hidden', wordBreak: 'break-word' }}>
         {answer}
         {question === translatedContent.usefulInfoSection.questions[2].question && (
-          <YoutubeButton
-            selectedLanguage={selectedLanguage}
-            style={{ marginTop: 10 }}
-          />
+          <React.Fragment>
+            <br />
+            <YoutubeButton
+              selectedLanguage={selectedLanguage}
+              style={{ marginTop: 10 }}
+            />
+          </React.Fragment>
         )}
         {question === translatedContent.usefulInfoSection.questions[0].question && (
           <React.Fragment>

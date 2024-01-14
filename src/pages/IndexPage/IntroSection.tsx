@@ -5,7 +5,30 @@ import Image from 'next/image';
 import { BorderedTable } from 'src/components/Table';
 import avatarImage from 'public/couple1.png';
 import content from 'src/assets/content';
+import styled from '@emotion/styled';
 
+const StyledInfoTable = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0 9rem;
+  position: relative;
+
+  td {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .youtube-container {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+`;
 const YouTubeEmbed = () => (
   <iframe
     width="100%"
@@ -15,6 +38,7 @@ const YouTubeEmbed = () => (
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
+    style={{backgroundColor: `${COLORS.highlight1} !important`}}
   ></iframe>
 );
 
@@ -50,13 +74,12 @@ const AvatarImage = () => {
     </div>
   );
 };
-
 const WelcomeText = ({ selectedLanguage }: any) => {
   const translatedContent = (content as any)[selectedLanguage];
 
   return (
-    <div>
-      <p>
+    <div style={{ textAlign: 'center', color: 'black' }}>
+      <p style={{ fontSize: '0.85rem', lineHeight: '1.8', marginBottom: '1rem' }}>
         {translatedContent && translatedContent.introSection.paragraph1}
         <br />
         {translatedContent && translatedContent.introSection.paragraph2}
@@ -64,7 +87,7 @@ const WelcomeText = ({ selectedLanguage }: any) => {
         {translatedContent && translatedContent.introSection.paragraph3}
       </p>
 
-      <p>
+      <p style={{ fontSize: '0.85rem', lineHeight: '1.8', marginBottom: '1rem' }}>
         {translatedContent && translatedContent.introSection.paragraph4}
         <br />
         {translatedContent && translatedContent.introSection.paragraph5}
@@ -77,20 +100,19 @@ const WelcomeText = ({ selectedLanguage }: any) => {
   );
 };
 
+
 export const InfoTable = ({ selectedLanguage }: any) => {
   const translatedContent = (content as any)[selectedLanguage];
 
   return (
-    <BorderedTable style={{ margin: '3rem 0 9rem', position: 'relative' }}>
-      <tbody>
-        <tr>
-          <td>{translatedContent && translatedContent.introSection.paragraph8}</td>
-          <td>
-            <YouTubeEmbed />
-          </td>
-        </tr>
-      </tbody>
-    </BorderedTable>
+    <StyledInfoTable>
+      <div>
+        <strong>{translatedContent && translatedContent.introSection.paragraph8}</strong>
+      </div>
+      <div className="youtube-container">
+        <YouTubeEmbed />
+      </div>
+    </StyledInfoTable>
   );
 };
 

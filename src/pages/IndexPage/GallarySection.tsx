@@ -38,7 +38,7 @@ const YouTubeEmbed = () => (
   <iframe
     width="100%"
     height="315"
-    src="https://www.youtube.com/embed/5I2UPxa9wxs"
+    src="https://www.youtube.com/embed/-bLWUiyYfs8?si=YTYEDC1IVyw8HgS9"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,14 +47,21 @@ const YouTubeEmbed = () => (
 );
 
 const GallarySection = ({ selectedLanguage }: any)  => {
-  const translatedContent = (content as any)[selectedLanguage].accountSection;
+  const translatedContent = (content as any)[selectedLanguage].gallary;
 
   const CarouselFrame = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
     border: 10px solid ${COLORS.highlight1};
     border-radius: 50px;
     overflow: hidden;
-    width: 100%;
+    width: 80%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    margin: auto;
+    background: ${COLORS.highlight1};
   `;
 
   return (
@@ -64,7 +71,7 @@ const GallarySection = ({ selectedLanguage }: any)  => {
           <Carousel showThumbs={false} showStatus={false}>
             {STUDIO_PICS.map((image, index) => (
               <div key={index}>
-                <img style={{overflow: 'hidden'}} src={image.src} alt={`prewedding-${index}`} />
+                <img style={{overflow: 'hidden', borderRadius: '40px'}} src={image.src} alt={`prewedding-${index}`} />
               </div>
             ))}
           </Carousel>

@@ -9,17 +9,17 @@ const Footer = ({ selectedLanguage }: any)  => {
 
   return (
     <FooterCSS>
-      <h3 style={{ fontSize: '1rem' }}>{translatedContent && translatedContent.madeBy}</h3>
+      <h3 style={{ fontSize: '0.8rem' }}>{translatedContent && translatedContent.madeBy}</h3>
       <table>
         <tbody>
           <tr>
-            <td style={{ fontSize: '0.8rem' }}>{translatedContent && translatedContent.excitement}</td>
+            <td style={{ fontSize: '0.65rem' }}>{translatedContent && translatedContent.excitement}</td>
           </tr>
           <tr>
-            <td style={{ fontSize: '0.8rem' }}>{translatedContent && translatedContent.love}</td>
+            <td style={{ fontSize: '0.65rem' }}>{translatedContent && translatedContent.love}</td>
           </tr>
           <tr>
-            <td style={{ fontSize: '0.8rem' }}>
+            <td style={{ fontSize: '0.65rem' }}>
               {translatedContent && translatedContent.mean}
             </td>
           </tr>

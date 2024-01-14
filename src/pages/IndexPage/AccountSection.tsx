@@ -58,7 +58,7 @@ const AccountSection = ({ selectedLanguage }: any) => {
         draggable={false}
         style={{ marginTop: 3, maxWidth: '35rem', height: 'auto' }}
       />
-      <div>{translatedContent.appreciate}</div>
+      <div style={{fontSize: '0.85rem'}}>{translatedContent.appreciate}</div>
     </Section>
   );
 };
