@@ -21,7 +21,7 @@ const content = {
       title: 'Schedule for the day',
       time1: '9:00 AM',
       event1: '🏡 Traditional Engagement Celebration! 🌟',
-      description11: "The Chiang's family will head to Anh's family at their home for a traditional engagement ceremony.",
+      description11: "The Bing's family will head to Anh's family at their home for a traditional engagement ceremony.",
       description12: "In keeping with the warmth of tradition, this event is reserved exclusively for family and relatives due to limited space.",
 
       time2: '2:00 PM',
