@@ -1,12 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styled from '@emotion/styled';
 import Countdown from 'react-countdown';
 import content from 'src/assets/content';
-import { RSVPButton } from 'src/components/Button';
+import {RSVPButton} from 'src/components/Button';
 
-const SplashSection = ({ selectedLanguage }: any) => {
+const StyledParagraph = styled.p`
+  font-family: 'Pacifico, cursive';
+  font-size: 30px;
+
+  @media (max-width: 600px) {
+    font-size: 20px; /* Adjust this value for smaller font size on mobile */
+  }
+`;
+
+const SplashSection = ({selectedLanguage} : any) => {
   const [typedDate, setTypedDate] = useState('');
-  const fullDate = "May 5th, 2024";
+  const fullDate = "05.05.2024";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -18,10 +27,11 @@ const SplashSection = ({ selectedLanguage }: any) => {
       }
     };
 
-    const typingInterval = setInterval(typeNextCharacter, 500); // Adjust the typing speed here
+    const typingInterval = setInterval(typeNextCharacter, 500);
+    // Adjust the typing speed here
 
     // Clean up the interval on component unmount
-    return () => clearInterval(typingInterval);
+    return() => clearInterval(typingInterval);
   }, []); // Empty dependency array to run the effect only once on mount
 
   const [isClient, setIsClient] = useState(false);
@@ -31,24 +41,26 @@ const SplashSection = ({ selectedLanguage }: any) => {
     setIsClient(true);
   }, []);
 
-  return (
-    <SplashContainer>
-      <JejuVideo />
-      <FlexContainer>
-        <MainHeading>{(content as any)[selectedLanguage].mainHeading}</MainHeading>
-        <p style={{fontFamily: 'Pacifico, cursive', fontSize: '25px'}}>{typedDate}</p>
-        <CountdownContainer>
-          {isClient && (
-            <Countdown date={weddingDate} renderer={(props) => <CountdownRenderer {...props} selectedLanguage={selectedLanguage} />} />
-            )}
-        </CountdownContainer>
-        <RSVPButton selectedLanguage={selectedLanguage}/>
-      </FlexContainer>
-    </SplashContainer>
-  );
+  return (<SplashContainer>
+    <FrontPageVideo/>
+    <FlexContainer>
+      <MainHeading> {
+        (content as any)[selectedLanguage].mainHeading
+      }</MainHeading>
+      <StyledParagraph> {fullDate} - Oklahoma City, Oklahoma</StyledParagraph>
+      <CountdownContainer> {
+        isClient && (<Countdown date={weddingDate}
+          renderer={
+            (props) => <CountdownRenderer {...props}
+              selectedLanguage={selectedLanguage}/>
+          }/>)
+      } </CountdownContainer>
+      <RSVPButton selectedLanguage={selectedLanguage}/>
+    </FlexContainer>
+  </SplashContainer>);
 };
 
-const SplashContainer = styled.div`
+const SplashContainer = styled.div `
   height: 100vh;
   color: white;
   font-size: 20px;
@@ -57,20 +69,22 @@ const SplashContainer = styled.div`
   }
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   justify-content: center;
   text-align: center;
+  line-height: 1;
 `;
 
-const MainHeading = styled.h1`
-  margin: 61vh 0 24px;
+const MainHeading = styled.h1 `
+  margin: 58vh 0 24px;
+  color: #fff;
 `;
 
-const CountdownContainer = styled.div`
+const CountdownContainer = styled.div `
   font-size: 6px;
   margin-bottom: 16px;
   color: #ffeb3b; /* Custom text color for the countdown */
@@ -82,37 +96,116 @@ const CountdownRenderer = ({
   minutes,
   seconds,
   completed,
-  selectedLanguage,
-}: any) => {
+  selectedLanguage
+} : any) => {
   const translatedContent = (content as any)[selectedLanguage];
 
   if (completed) {
-    return <CountdownComplete>{translatedContent && translatedContent.mainHeading}</CountdownComplete>;
+    return <CountdownComplete> {
+      translatedContent && translatedContent.mainHeading
+    }</CountdownComplete>;
   } else {
-    return (
-      <CountdownText>
-        {days} {translatedContent && translatedContent.days}, {hours} {translatedContent && translatedContent.hours}, {minutes} {translatedContent && translatedContent.minutes}, {seconds} {translatedContent && translatedContent.seconds}
-      </CountdownText>
-    );
+    return (<CountdownTable>
+      <tbody>
+        <td>
+          <CountRow>
+            <CountdownCell> {days}</CountdownCell>
+          </CountRow>
+          <CountRow>
+            <CountdownCell> {
+              translatedContent && translatedContent.days
+            }</CountdownCell>
+          </CountRow>
+        </td>
+        <td>
+          <CountdownSeparator>:</CountdownSeparator>
+        </td>
+        <td>
+          <CountRow>
+            <CountdownCell> {hours}</CountdownCell>
+          </CountRow>
+          <CountRow>
+            <CountdownCell> {
+              translatedContent && translatedContent.hours
+            }</CountdownCell>
+          </CountRow>
+        </td>
+        <td>
+          <CountdownSeparator>:</CountdownSeparator>
+        </td>
+        <td>
+          <CountRow>
+
+            <CountdownCell> {minutes}</CountdownCell>
+          </CountRow>
+          <CountRow>
+            <CountdownCell> {
+              translatedContent && translatedContent.minutes
+            }</CountdownCell>
+          </CountRow>
+        </td>
+        <td>
+          <CountdownSeparator>:</CountdownSeparator>
+        </td>
+        <td>
+          <CountRow>
+            <CountdownCell> {seconds}</CountdownCell>
+          </CountRow>
+          <CountRow>
+            <CountdownCell> {
+              translatedContent && translatedContent.seconds
+            }</CountdownCell>
+          </CountRow>
+        </td>
+      </tbody>
+    </CountdownTable>);
   }
 };
 
-const CountdownText = styled.span`
-  font-size: 20px;
-  font-weight: bold;
-  color: #faf4f4;
-  @media (max-width: 768px) {
-    font-size: 15px;
+const CountdownWrapper = styled.div`
+  @media (max-width: 600px) {
+    font-size: 14px; /* Adjust this value for smaller font size on mobile */
   }
 `;
 
-const CountdownComplete = styled.span`
+const CountRow = styled.tr`
+  padding: 0;
+  line-height: 1;
+`
+const CountdownTable = styled.table `
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+`;
+
+const CountdownCell = styled.td `
+  padding: 5px;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  @media (max-width: 600px) {
+    font-size: 16px; /* Adjust this value for smaller font size on mobile */
+  }
+`;
+
+const CountdownSeparator = styled.td `
+  padding: 25px;
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+  @media (max-width: 600px) {
+    font-size: 16px; /* Adjust this value for smaller font size on mobile */
+    padding: 0;
+  }
+`;
+
+const CountdownComplete = styled.span `
   font-weight: bold;
   color: #4caf50; /* Custom text color for the completed countdown */
 `;
 
-const JejuVideo = () => {
-  const videoRef = useRef<any>(null);
+const FrontPageVideo = () => {
+  const videoRef = useRef < any > (null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   const handlePlay = () => {
@@ -126,8 +219,7 @@ const JejuVideo = () => {
   useEffect(() => {
     const video = videoRef.current;
 
-    const handleEnded = () => {
-      // Video has ended, restart playback
+    const handleEnded = () => { // Video has ended, restart playback
       video.currentTime = 0;
       video.play();
     };
@@ -138,40 +230,39 @@ const JejuVideo = () => {
 
     // Start playing when the component mounts
     if (isPlaying) {
-      video.play().catch((error: any) => {
-        // Autoplay may be blocked, handle the error
+      video.play().catch((error : any) => { // Autoplay may be blocked, handle the error
         console.error('Autoplay blocked:', error);
       });
     }
 
-    return () => {
+    return() => {
       video.removeEventListener('play', handlePlay);
       video.removeEventListener('pause', handlePause);
       video.removeEventListener('ended', handleEnded);
     };
   }, [isPlaying]);
 
-  return (
-    <video
-      preload="metadata"
-      ref={videoRef}
-      controls={false}
-      loop
-      muted
-      autoPlay
-      playsInline
-      style={{
+  return (<video preload="metadata"
+    ref={videoRef}
+    controls={false}
+    loop
+    muted
+    autoPlay
+    playsInline
+    style={
+      {
         width: '100vw',
         height: '100vh',
         objectFit: 'cover',
         position: 'absolute',
         zIndex: -1,
-        opacity: 0.6,
-      }}
-    >
-      <source src={'/binganh.mp4'} type="video/mp4" />
-    </video>
-  );
+        opacity: 0.6
+      }
+  }>
+    <source src={'/binganh.mp4'}
+      type="video/mp4"/>
+  </video>);
 };
 
 export default SplashSection;
+
