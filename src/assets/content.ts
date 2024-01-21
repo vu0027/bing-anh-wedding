@@ -145,8 +145,8 @@ const content = {
       paragraph1: "Chúng tôi sắp kết hôn sau 4 năm bên nhau.",
       paragraph2: "Khó có thể tưởng tượng thời gian mà không có nhau, vì vậy",
       paragraph3: "chúng tôi đang bắt đầu trang mới của cuộc đời.",
-      paragraph4: "Chúng tôi sẽ tổ chức thánh lễ hôn phối tại Nhà thờ Công giáo Thánh Andrea Dung-Lac.",
-      paragraph5: "Chúng tôi muốn mời các vị khách đến Clauren Ridge Vineyard and Winery.",
+      paragraph4: "Chúng tôi sẽ tổ chức thánh lễ hôn phối tại Nhà thờ Công giáo Thánh Anrê Dũng Lạc.",
+      paragraph5: "Chúng tôi muốn mời các vị khách đến Clauren Ridge Vineyard và Winery.",
       paragraph6: "Hãy tham gia cùng chúng tôi với đồ ăn ngon, thức uống và niềm vui! Sự hiện diện của bạn sẽ làm cho ngày của chúng tôi trở nên đặc biệt hơn.",
       paragraph7: "Chúc mừng tình yêu và sự bắt đầu mới!",
       paragraph8: "Xem video cầu hôn"

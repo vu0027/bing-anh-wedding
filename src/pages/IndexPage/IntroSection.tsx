@@ -77,7 +77,7 @@ const WelcomeText = ({ selectedLanguage }: any) => {
   const translatedContent = (content as any)[selectedLanguage];
 
   return (
-    <div style={{ textAlign: 'center', color: 'black' }}>
+    <div style={{ textAlign: 'center', color: 'black', marginTop: '3rem' }}>
       <p style={{ fontSize: '0.85rem', lineHeight: '1.8', marginBottom: '1rem' }}>
         {translatedContent && translatedContent.introSection.paragraph1}
         <br />
