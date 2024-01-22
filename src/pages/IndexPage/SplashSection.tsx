@@ -80,7 +80,7 @@ const FlexContainer = styled.div `
 `;
 
 const MainHeading = styled.h1 `
-  margin: 40vh 0 24px;
+  margin: 35vh 0 24px;
   color: #fff;
   text-shadow: 0px 0px 10px rgb(0 0 0 / 100);
 `;

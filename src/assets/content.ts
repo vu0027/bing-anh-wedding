@@ -11,7 +11,7 @@ const content = {
       paragraph2: "It's hard to imagine time without each other, so",
       paragraph3: "we're starting season 2 of our relationship.",
       paragraph4: "We will do the ceremony at Saint Andrew Dung-Lac Catholic Church.",
-      paragraph5: "We would like to invite our guests to Clauren Ridge Vineyard and Winery.",
+      paragraph5: "After that, we would like to invite our guests to Clauren Ridge Vineyard and Winery.",
       paragraph6: "Join us for delicious food, drinks, and fun! Your presence will make our day extra special.",
       paragraph7: "Cheers to love and new beginnings!",
       paragraph8: "Checkout wedding proposal video"
@@ -146,7 +146,7 @@ const content = {
       paragraph2: "Khó có thể tưởng tượng thời gian mà không có nhau, vì vậy",
       paragraph3: "chúng tôi đang bắt đầu trang mới của cuộc đời.",
       paragraph4: "Chúng tôi sẽ tổ chức thánh lễ hôn phối tại Nhà thờ Công giáo Thánh Anrê Dũng Lạc.",
-      paragraph5: "Chúng tôi muốn mời các vị khách đến Clauren Ridge Vineyard và Winery.",
+      paragraph5: "Sau đó, chúng tôi muốn mời các vị khách đến Clauren Ridge Vineyard và Winery.",
       paragraph6: "Hãy tham gia cùng chúng tôi với đồ ăn ngon, thức uống và niềm vui! Sự hiện diện của bạn sẽ làm cho ngày của chúng tôi trở nên đặc biệt hơn.",
       paragraph7: "Chúc mừng tình yêu và sự bắt đầu mới!",
       paragraph8: "Xem video cầu hôn"
@@ -164,9 +164,9 @@ const content = {
       directionLink1: 'Nhấn để xem đường đến Nhà thờ Công giáo Thánh Anrê Dũng Lạc',
 
       time3: '5:00 CH',
-      event3: '🎉 Tham Gia Đại Tiệc Cưới! 🥂',
+      event3: '🎉 Tham Gia Tiệc Cưới! 🥂',
       description31: '📸 Happy Hour cho ảnh và ăn nhẹ: Ghi lại những kỷ niệm trong giờ hạnh phúc của chúng tôi, với các loại phô mai, trái cây. Đừng quên tạo dáng!',
-      description32: '🍖🍷 BBQ, Rượu và Cocktail đá bào: Thưởng thức BBQ yêu thích của chúng tôi, thưởng thức rượu tinh tế và mát lạnh với cocktail slushes sảng khoái. Một bữa tiệc cho giác quan vị giác của bạn!',
+      description32: '🍖🍷 BBQ, Rượu và Cocktail đá bào: Thưởng thức BBQ yêu thích của chúng tôi, thưởng thức rượu và cocktail mát lạnh trong một bữa tiệc ấm cúng!',
       description33: '🎤 Góc Hát Karaoke: Hãy thể hiện khả năng ca hát tại góc hát karaoke của chúng tôi.',
       directionLink2: 'Nhấn để xem đường đến Clauren Ridge Vineyard and Winery tại Edmond, Oklahoma'
     },
@@ -196,7 +196,7 @@ const content = {
     },
     swipeRightMessage: "Vuốt sang phải để xem thêm hình ảnh.",
     invitation: {
-      madeBy: "Viết bởi Bing và Anh.",
+      madeBy: "Bing và Anh.",
       excitement: 'Chúng tôi tràn đầy hạnh phúc cho đám cưới sắp tới của chúng tôi',
       love: 'và chúng tôi rất mong bạn có thể tham gia cùng chúng tôi.',
       mean: 'Điều đó sẽ có ý nghĩa lớn với chúng tôi nếu bạn có mặt cùng chúng tôi trong ngày đặc biệt này!'
