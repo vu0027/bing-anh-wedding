@@ -5,6 +5,7 @@ import Image from 'next/image';
 import avatarImage from 'public/couple1.png';
 import content from 'src/assets/content';
 import styled from '@emotion/styled';
+import celebrate from 'public/celebrate.png';
 
 const StyledInfoTable = styled.div`
   display: flex;
@@ -37,7 +38,7 @@ const YouTubeEmbed = () => (
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
-    style={{backgroundColor: `${COLORS.highlight1} !important`}}
+    style={{ backgroundColor: `${COLORS.highlight1} !important` }}
   ></iframe>
 );
 
@@ -78,7 +79,13 @@ const WelcomeText = ({ selectedLanguage }: any) => {
 
   return (
     <div style={{ textAlign: 'center', color: 'black', marginTop: '3rem' }}>
-      <p style={{ fontSize: '0.85rem', lineHeight: '1.8', marginBottom: '1rem' }}>
+      <Image
+        src={celebrate}
+        alt="Photo"
+        width={70}
+        height={60}
+      />
+      <p style={{ fontSize: '0.85rem', lineHeight: '1.8', margin: '1rem', marginTop: '2rem' }}>
         {translatedContent && translatedContent.introSection.paragraph1}
         <br />
         {translatedContent && translatedContent.introSection.paragraph2}

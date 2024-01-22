@@ -33,8 +33,8 @@ const DropdownContainer = styled.div`
   select {
     padding: 1px;
     font-size: 16px;
-    color: #fff; /* Text color */
-    background-color: black; /* Pink background color */
+    color: black; /* Text color */
+    background-color: white; /* Pink background color */
     border-radius: 5px; /* Border radius */
     cursor: pointer;
     outline: none;

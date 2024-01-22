@@ -80,8 +80,9 @@ const FlexContainer = styled.div `
 `;
 
 const MainHeading = styled.h1 `
-  margin: 45vh 0 24px;
+  margin: 40vh 0 24px;
   color: #fff;
+  text-shadow: 0px 0px 10px rgb(0 0 0 / 100);
 `;
 
 const CountdownContainer = styled.div `
@@ -162,12 +163,6 @@ const CountdownRenderer = ({
   }
 };
 
-const CountdownWrapper = styled.div`
-  @media (max-width: 600px) {
-    font-size: 14px; /* Adjust this value for smaller font size on mobile */
-  }
-`;
-
 const CountRow = styled.tr`
   padding: 0;
   line-height: 1;
@@ -180,9 +175,10 @@ const CountdownTable = styled.table `
 
 const CountdownCell = styled.td `
   padding: 5px;
-  color: black;
+  color: #e23d7d;
   font-size: 25px;
   font-weight: bold;
+  text-shadow: 0px 0px 8px rgb(255 255 255 / 100);
   @media (max-width: 600px) {
     font-size: 16px; /* Adjust this value for smaller font size on mobile */
   }
@@ -190,9 +186,10 @@ const CountdownCell = styled.td `
 
 const CountdownSeparator = styled.td `
   padding: 25px;
-  color: black;
+  color: #e23d7d;
   font-size: 35px;
   font-weight: bold;
+  text-shadow: 0px 0px 8px rgb(255 255 255 / 100);
   @media (max-width: 600px) {
     font-size: 16px; /* Adjust this value for smaller font size on mobile */
     padding: 0;

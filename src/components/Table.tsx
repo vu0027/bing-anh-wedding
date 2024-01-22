@@ -19,7 +19,6 @@ export const TimelineTable = styled.table`
   width: 100%;
   border-left: 1px solid black;
   padding-left: 1rem;
-
   td:first-child {
     font-weight: 700;
     width: 25%;
