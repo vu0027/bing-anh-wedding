@@ -2,12 +2,7 @@ import styled from '@emotion/styled';
 
 export const BorderedTable = styled.table`
   border-top: 1px solid black;
-  /* border-bottom: 1px solid black; */
   width: 100%;
-
-  tr:first-child td {
-    border-bottom: 1px solid black;
-  }
 
   td:first-child {
     font-weight: 700;
@@ -24,7 +19,6 @@ export const TimelineTable = styled.table`
   width: 100%;
   border-left: 1px solid black;
   padding-left: 1rem;
-
   td:first-child {
     font-weight: 700;
     width: 25%;
@@ -42,4 +36,5 @@ export const TimelineTable = styled.table`
     list-style: lower-roman;
     margin: 0 0.9rem;
   }
+  overflow: hidden;
 `;

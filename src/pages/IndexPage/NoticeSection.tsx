@@ -1,55 +1,29 @@
 import React from 'react';
 import { COLORS } from 'src/assets/theme';
-import { RSVPButton, YoutubeButton } from 'src/components/Button';
 import Section from 'src/components/Section';
-import Image from 'next/image';
-import tobox from 'public/tobox.png';
+import { RSVPButton, YoutubeButton } from 'src/components/Button';
+import content from 'src/assets/content';
 
-const NoticeSection = () => {
+const NoticeSection = ({ selectedLanguage }: any) => {
+  const translatedContent = (content as any)[selectedLanguage];
+
   return (
     <Section
-      backgroundColor={COLORS.highlight3}
-      title={`Useful information to know in advance.`}
+      backgroundColor={COLORS.highlight1}
+      title={translatedContent.usefulInfoSection.title}
     >
-      <ul style={{ listStyle: 'none', margin: 0 }}>
-        <QnA
-          question="How can I reservation?"
-          answer={
-            <>
-              If you are attending the party, please use the button below to
-              inform us of the number of participants and meal options. It is
-              very helpful in preparing 😄
-              <RSVPButton style={{ marginTop: 3 }} />
-            </>
-          }
-        />
-        <QnA
-          question="What time can I go?"
-          answer={
-            <>
-              The ceremony starts at 2:00PM and photography is allowed from
-              1:00PM. After the ceremony, we will take some photo and go
-              straight to the winery. I will be 30 minutes drive from church to
-              the winery.
-              <Image
-                src={tobox}
-                alt="Photo"
-                draggable={false}
-                style={{ marginTop: 3 }}
-              />
-            </>
-          }
-        />
-        <QnA
-          question="Unfortunately, I couldn’t go."
-          answer={
-            <>
-              We will post our wedding video on Youtube when it is available so
-              you can watch later.
-              <YoutubeButton style={{ marginTop: 3 }} />
-            </>
-          }
-        />
+      <ul style={{ listStyle: 'none', margin: 0, fontSize: '0.85rem' }}>
+        {translatedContent.usefulInfoSection.questions.map(
+          (qna: any, index: number) => (
+            <QnA
+              key={index}
+              question={qna.question}
+              answer={qna.answer}
+              selectedLanguage={selectedLanguage}
+              translatedContent={translatedContent}
+            />
+          )
+        )}
       </ul>
     </Section>
   );
@@ -58,14 +32,38 @@ const NoticeSection = () => {
 function QnA({
   question,
   answer,
+  selectedLanguage,
+  translatedContent
 }: {
   question: string;
   answer: React.ReactNode;
+  selectedLanguage: string;
+  translatedContent: any,
 }) {
   return (
     <li>
       <strong>Q. {question}</strong>
-      <div style={{ padding: '0 0 1.6rem' }}>{answer}</div>
+      <div style={{ padding: '0 0 1.6rem', whiteSpace: 'pre-wrap', overflow: 'hidden', wordBreak: 'break-word' }}>
+        {answer}
+        {question === translatedContent.usefulInfoSection.questions[2].question && (
+          <React.Fragment>
+            <br />
+            <YoutubeButton
+              selectedLanguage={selectedLanguage}
+              style={{ marginTop: 10 }}
+            />
+          </React.Fragment>
+        )}
+        {question === translatedContent.usefulInfoSection.questions[0].question && (
+          <React.Fragment>
+            <br />
+            <RSVPButton
+              selectedLanguage={selectedLanguage}
+              style={{ marginTop: 10 }}
+            />
+          </React.Fragment>
+        )}
+      </div>
     </li>
   );
 }

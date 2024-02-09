@@ -1,3 +1,4 @@
+import _0 from 'public/photos/PreWed/0.jpg';
 import _1 from 'public/photos/PreWed/1.jpg';
 import _2 from 'public/photos/PreWed/2.jpg';
 import _3 from 'public/photos/PreWed/3.jpg';
@@ -16,10 +17,9 @@ import _15 from 'public/photos/PreWed/15.jpg';
 import _16 from 'public/photos/PreWed/16.jpg';
 import _17 from 'public/photos/PreWed/17.jpg';
 import _18 from 'public/photos/PreWed/18.jpg';
-import _19 from 'public/photos/PreWed/19.jpg';
-import _20 from 'public/photos/PreWed/20.jpg';
 
 export const STUDIO_PICS = [
+  _0,
   _1,
   _2,
   _3,
@@ -36,5 +36,6 @@ export const STUDIO_PICS = [
   _14,
   _15,
   _16,
+  _17,
+  _18
 ];
-export const JEJU_PICS = [_17, _18, _19, _20];

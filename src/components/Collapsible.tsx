@@ -10,25 +10,35 @@ const Collapsible = ({
   contents: React.ReactNode;
 }) => {
   const [collapsed, setCollapsed] = React.useState(true);
+
   return (
     <Container>
-      <div onClick={() => setCollapsed(prev => !prev)}>{title}</div>
+      <TitleContainer onClick={() => setCollapsed(prev => !prev)}>
+        {title}
+      </TitleContainer>
       {!collapsed && <Contents>{contents}</Contents>}
     </Container>
   );
 };
 
 const Container = styled.div`
-  background: ${COLORS.highlight3};
   border-radius: 6px;
   margin-bottom: 12px;
   padding: 10px 13px;
-  border: 1px solid #000000b5;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: ${COLORS.highlight1};
+  &:hover {
+    border-color: grey;
+  }
+`;
+
+const TitleContainer = styled.div`
   cursor: pointer;
 `;
 
 const Contents = styled.div`
-  border-top: 1px solid #000000b5;
+  border-top: 1px solid grey;
   margin-top: 10px;
   padding-top: 10px;
 `;

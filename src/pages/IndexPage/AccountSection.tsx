@@ -3,74 +3,107 @@ import { COLORS } from 'src/assets/theme';
 import Collapsible from 'src/components/Collapsible';
 import Section from 'src/components/Section';
 import copyTextToClipboard from 'src/utils/copyToClipboard';
+import Image from 'next/image';
+import tobox from 'public/tobox.png';
+import content from 'src/assets/content';
 
-const AccountSection = () => {
+const AccountSection = ({ selectedLanguage }: any) => {
+  const translatedContent = (content as any)[selectedLanguage].accountSection;
+
   return (
-    <Section backgroundColor={COLORS.highlight2} title="Honeymoon fund">
+    <Section backgroundColor={COLORS.highlight2} title={translatedContent.title}>
       <Collapsible
-        title="View Groom Account"
+        title={translatedContent.viewG}
         contents={
           <div>
-            <CopyInfo />
-            <Acocunt
+            <CopyInfo translatedContent={translatedContent} />
+            <Account
               bankName="Zelle"
               accountNo="405 510 2655"
               name="Bing-Hao Chiang"
+              selectedLanguage={selectedLanguage}
             />
-            <Acocunt
+            <Account
               bankName="Venmo"
               accountNo="Bing-Hao-Chiang"
               name="Bing-Hao Chiang"
+              selectedLanguage={selectedLanguage}
             />
           </div>
         }
       />
       <Collapsible
-        title="View Bride Account"
+        title={translatedContent.viewB}
         contents={
           <div>
             <CopyInfo />
-            <Acocunt bankName="Zelle" accountNo="405 604 7365" name="Anh Vu" />
-            <Acocunt bankName="Venmo" accountNo="anhvucs" name="Anh Vu" />
+            <Account
+              bankName="Zelle"
+              accountNo="405 604 7365"
+              name="Anh Vu"
+              selectedLanguage={selectedLanguage}
+            />
+            <Account
+              bankName="Venmo"
+              accountNo="anhvucs"
+              name="Anh Vu"
+              selectedLanguage={selectedLanguage}
+            />
           </div>
         }
       />
-      <div>We appreciate you making this happen.</div>
+      <Image
+        src={tobox}
+        alt="Photo"
+        draggable={false}
+        style={{ marginTop: 3, maxWidth: '35rem', height: 'auto' }}
+      />
+      <div style={{fontSize: '0.85rem'}}>{translatedContent.appreciate}</div>
     </Section>
   );
 };
 
-const CopyInfo = () => (
+const CopyInfo = (translatedContent: any) => (
   <div style={{ fontSize: '0.9em', fontStyle: 'italic', marginBottom: 3 }}>
-    Click to copy the account number.
+    {translatedContent.clickToCopy}
   </div>
 );
 
-const Acocunt = ({
+const Account = ({
   bankName,
   accountNo,
   name,
+  selectedLanguage,
 }: {
   bankName: string;
   accountNo: string;
   name: string;
+  selectedLanguage: string;
 }) => {
+  const translatedContent = (content as any)[selectedLanguage].accountSection;
+
   return (
     <div
       onClick={() => {
         copyTextToClipboard(accountNo, () => {
-          alert(`${name}'s ${bankName} is copied.`);
+          alert(`${name}'s ${bankName} ${translatedContent.clickToCopy}`);
         });
       }}
       style={{
         display: 'flex',
         justifyContent: 'space-between',
         marginBottom: 5,
+        transition: 'background 0.3s ease', // Add transition for smooth effect
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = '#ffffff'; // Change border color on hover
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = 'transparent'; // Reset background color on leave
       }}
     >
       <div>{bankName}</div>
       <div>{accountNo}</div>
-      <div>{name}</div>
     </div>
   );
 };
