@@ -35,7 +35,7 @@ const TimelineSection = () => {
             </td>
           </tr>
           <tr>
-            <td>5:00 PM</td>
+            <td>6:00 PM</td>
             <td>
               <strong>Wedding Celebration</strong>
               <ul>
