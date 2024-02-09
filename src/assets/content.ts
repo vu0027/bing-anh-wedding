@@ -29,7 +29,7 @@ const content = {
       description2: 'We\'re extending a heartfelt invitation to everyone to join us at the church to witness and celebrate as we sign the marriage documents.',
       directionLink1: 'Click for direction to Saint Andrew Dung-Lac Catholic Church',
 
-      time3: '5:00 PM',
+      time3: '6:00 PM',
       event3: '🎉 Join the Wedding Celebration! 🥂',
       description31: '📸 Happy Hour for Photos and Snacks: Capture memories during our happy hour, complete with a selection of small snacks. Don\'t forget to strike a pose!',
       description32: '🍖🍷 BBQ, Wines, and Cocktail Slushes: Indulge in our favorite BBQ, savor exquisite wines, and cool off with refreshing cocktail slushes. A feast for your taste buds!',
@@ -95,7 +95,7 @@ const content = {
       event2: '🎉 教堂結婚典禮 🤍',
       description2: '誠摯邀請您共同見證我們的結婚儀式',
       directionLink1: '請點擊此連結查看Saint Andrew Dung - Lac天主教堂位置 ',
-      time3: '晚上5:00 ',
+      time3: '晚上6:00 ',
       event3: '🎉 葡萄園酒莊婚宴 🥂',
       description31: '📸 與新人拍照留影時間，並享受開胃菜',
       description32: '🍖🍷 敬邀您品嚐我們最愛的美式燒烤、葡萄酒和雞尾酒冰沙。',
@@ -163,7 +163,7 @@ const content = {
       description2: 'Chúng tôi gửi lời mời chân thành đến tất cả mọi người đến tham gia cùng chúng tôi tại nhà thờ để làm chứng chúng tôi đăng kí kết hôn.',
       directionLink1: 'Nhấn để xem đường đến Nhà thờ Công giáo Thánh Anrê Dũng Lạc',
 
-      time3: '5:00 CH',
+      time3: '6:00 CH',
       event3: '🎉 Tham Gia Tiệc Cưới! 🥂',
       description31: '📸 Happy Hour cho ảnh và ăn nhẹ: Ghi lại những kỷ niệm trong giờ hạnh phúc của chúng tôi, với các loại phô mai, trái cây. Đừng quên tạo dáng!',
       description32: '🍖🍷 BBQ, Rượu và Cocktail đá bào: Thưởng thức BBQ yêu thích của chúng tôi, thưởng thức rượu và cocktail mát lạnh trong một bữa tiệc ấm cúng!',
