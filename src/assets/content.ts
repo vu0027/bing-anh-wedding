@@ -177,7 +177,7 @@ const content = {
       appreciate: 'Chúng tôi biết ơn bạn đã làm cho điều này xảy ra.',
       clickToCopy: 'Nhấn để sao chép số tài khoản.'
     },
-    rsvpSection: 'R.S.V.P',
+    rsvpSection: 'Nhấn Để Đăng Kí',
     youtubeButton: 'Video Cưới',
     usefulInfoSection: {
       title: "Thông tin hữu ích cần biết trước.",
