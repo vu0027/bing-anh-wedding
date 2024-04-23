@@ -23,7 +23,7 @@ export const RSVPButton = ({ style, selectedLanguage }: { style?: React.CSSPrope
       <Button
         variant="contained"
         onClick={() => {
-          window.open('/Seat_Map.pdf');
+          window.open('/Seat_Map1.pdf');
         }}
         style={{ borderRadius: '18px', background: '#ff7991', ...style }}
       >
