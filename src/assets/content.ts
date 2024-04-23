@@ -43,17 +43,18 @@ const content = {
       appreciate: 'We appreciate you making this happen.',
       clickToCopy: 'Click to copy the account number.'
     },
-    rsvpSection: 'R.S.V.P',
+    rsvpSection: 'Seat Map',
+    plan: 'Wedding Details',
     youtubeButton: 'Wedding Video',
     usefulInfoSection: {
       title: "Useful information to know in advance.",
       questions: [
         {
-          question: "🍽️ How Can I Make a Reservation?",
-          answer: "If you plan to attend the party, kindly use the button below to inform us of the number of participants and meal options. Your timely response is greatly appreciated as it helps us in preparing for the celebration."
+          question: "🍽️ You can see where you seat in advance.",
+          answer: ""
         }, {
           question: "🕑 What time should I arrive?",
-          answer: "The ceremony starts at 2:00 PM, and photography is allowed from 1:00 PM. After the ceremony, we will take some photos and go straight to the winery. It is approximately a 30-minute drive from the church to the winery."
+          answer: "The ceremony starts at 2:00 PM. After the ceremony, we will take some photos and go straight to the winery. It is approximately a 30-minute drive from the church to the winery."
         }, {
           question: "🎥 Unfortunately, I couldn’t go.",
           answer: "If you find yourself unable to attend, don't worry! We'll be sharing our wedding video on Youtube once it's available. You can catch all the beautiful moments and join in the celebration virtually."
@@ -109,7 +110,8 @@ const content = {
       appreciate: '感謝您對我們蜜月旅行基金的慷慨支持!',
       clickToCopy: '請點選複製帳號。'
     },
-    rsvpSection: '敬請賜覆',
+    rsvpSection: '座位圖',
+    plan: 'Wedding Details',
     youtubeButton: '婚禮直播影片',
     usefulInfoSection: {
       title: "常見問題。",
@@ -177,17 +179,18 @@ const content = {
       appreciate: 'Chúng tôi biết ơn bạn đã làm cho điều này xảy ra.',
       clickToCopy: 'Nhấn để sao chép số tài khoản.'
     },
-    rsvpSection: 'R.S.V.P',
+    rsvpSection: 'Sơ Đồ Chỗ Ngồi',
+    plan: 'Chương Trình',
     youtubeButton: 'Video Cưới',
     usefulInfoSection: {
       title: "Thông tin hữu ích cần biết trước.",
       questions: [
         {
-          question: "🍽️ Làm thế nào để đặt chỗ?",
-          answer: "Nếu bạn dự định tham gia bữa tiệc, vui lòng sử dụng nút bên dưới để thông báo cho chúng tôi biết về số lượng người tham dự và điều gì chúng tôi cần lưu ý. Sự phản hồi kịp thời của bạn rất quan trọng vì nó giúp chúng tôi chuẩn bị cho sự kiện một cách trọn vẹn hơn."
+          question: "🍽️ Xem trước sơ đồ chỗ ngổi.",
+          answer: ""
         }, {
           question: "🕑 Tôi nên đến lúc nào?",
-          answer: "Thánh Lễ bắt đầu vào lúc 2:00 CH, và việc chụp ảnh được phép từ lúc 1:00 CH. Sau lễ, chúng tôi cũng sẽ chụp một số bức ảnh và sau đó đi đến nhà hàng tiệc cưới. Từ nhà thờ đến nhà hàng là khoảng 30 phút lái xe."
+          answer: "Thánh Lễ bắt đầu vào lúc 2:00 CH. Sau lễ, chúng tôi cũng sẽ chụp một số bức ảnh và sau đó đi đến nhà hàng tiệc cưới. Từ nhà thờ đến nhà hàng là khoảng 30 phút lái xe."
         }, {
           question: "🎥 Thật tiếc là tôi không thể tham gia.",
           answer: "Nếu bạn không thể tham gia, đừng lo lắng! Chúng tôi sẽ chia sẻ video cưới của mình trên Youtube khi có. Bạn có thể xem tất cả những khoảnh khắc đẹp. Hãy để lại bình luân dưới video nhé!"
