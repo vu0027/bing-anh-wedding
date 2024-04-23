@@ -34,7 +34,7 @@ export const RSVPButton = ({ style, selectedLanguage }: { style?: React.CSSPrope
         onClick={() => {
           window.open('/WeddingDetails.pdf');
         }}
-        style={{ marginLeft: '10px', borderRadius: '18px', background: '#ff7991', ...style }}
+        style={{ marginTop: '5px', borderRadius: '18px', background: '#ff7991', ...style }}
       >
         {translatedContent.plan}
       </Button>
